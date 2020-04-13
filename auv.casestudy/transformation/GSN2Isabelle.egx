@@ -1,0 +1,10 @@
+import 'util.eol';
+
+rule Module2Formalisation
+	transform module : GSN!Module {
+	
+	template : "Gsn2Isabelle_SACM.egl"
+	
+	target : "../files/" + module.name.content + ".html"
+}
+

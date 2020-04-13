@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<assuranceCase_:AssuranceCasePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:artifact_="http://omg.sacm/2.0/artifact" xmlns:assuranceCase_="http://omg.sacm/2.0/assurancecase" xmlns:base_="http://omg.sacm/2.0/base" xmlns:gsn_="http://org.eclipse.acme/1.0/gsn" xmlns:terminology_="http://omg.sacm/2.0/terminology">
+  <name lang="English" content="AC_AUV"/>
+  <description>
+    <content>
+      <value xsi:type="base_:ExpressionLangString" lang="English" content="Container AC for AUV"/>
+    </content>
+  </description>
+  <implementationConstraint>
+    <content>
+      <value lang="English" content=""/>
+    </content>
+  </implementationConstraint>
+  <assuranceCasePackage>
+    <name lang="English" content="AUV_AC"/>
+    <description>
+      <content>
+        <value xsi:type="base_:ExpressionLangString" lang="English" content="Assurance Case for AUV"/>
+      </content>
+    </description>
+    <implementationConstraint>
+      <content>
+        <value lang="English" content=""/>
+      </content>
+    </implementationConstraint>
+    <artifactPackage>
+      <name lang="English" content="AUV_Artifact"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Artifacts for AUV Assurance"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+      <artifactElement xsi:type="artifact_:Artifact">
+        <name lang="English" content="R2"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="When, and only when, in OCM, the LRE shall accept operator control inputs and send them to the autopilot."/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+        <artifactProperty>
+          <name lang="English" content="URI"/>
+          <description>
+            <content>
+              <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\runtime-EclipseApplication\example\auv.model"/>
+            </content>
+          </description>
+          <implementationConstraint>
+            <content>
+              <value lang="English" content=""/>
+            </content>
+          </implementationConstraint>
+        </artifactProperty>
+      </artifactElement>
+      <artifactElement xsi:type="artifact_:Artifact">
+        <name lang="English" content="R1"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="Physical dimension of the AUV shall be 457mm * 338mm * 254mm."/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="AUV.all().first().dimension.width=457 and ..."/>
+          </content>
+        </implementationConstraint>
+        <artifactProperty>
+          <name lang="English" content="URI"/>
+          <description>
+            <content>
+              <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\runtime-EclipseApplication\example\auv.model"/>
+            </content>
+          </description>
+          <implementationConstraint>
+            <content>
+              <value lang="English" content=""/>
+            </content>
+          </implementationConstraint>
+        </artifactProperty>
+      </artifactElement>
+      <artifactElement xsi:type="artifact_:Artifact">
+        <name lang="English" content="R3"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="The LRE shall enter OCM either (i) when the AUV powers up; (ii) at the end of a task; or (iii) when the operator requests."/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+        <artifactProperty>
+          <name lang="English" content="URI"/>
+          <description>
+            <content>
+              <value xsi:type="base_:ExpressionLangString" lang="English" content="URI for external reference"/>
+            </content>
+          </description>
+          <implementationConstraint>
+            <content>
+              <value lang="English" content=""/>
+            </content>
+          </implementationConstraint>
+        </artifactProperty>
+      </artifactElement>
+      <artifactElement xsi:type="artifact_:Artifact">
+        <name lang="English" content="R4"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="The LRE shall enter MOM from OCM when the following conditions hold: (i) the velocity is less than 0.1ms-1; (ii) the distance to a static obstacle is > 300mm; (iii) the distance to a dynamic obstacle is greater than 7500mm; (iv) the operator requests it; and (v) the AUV is not in an OPEZ."/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+        <artifactProperty>
+          <name lang="English" content="URI"/>
+          <description>
+            <content>
+              <value xsi:type="base_:ExpressionLangString" lang="English" content="URI for external reference"/>
+            </content>
+          </description>
+          <implementationConstraint>
+            <content>
+              <value lang="English" content=""/>
+            </content>
+          </implementationConstraint>
+        </artifactProperty>
+      </artifactElement>
+      <artifactElement xsi:type="artifact_:Resource">
+        <name lang="English" content="Hazard_log"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="Hazard_log"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+        <artifactProperty>
+          <name lang="English" content="URI"/>
+          <description>
+            <content>
+              <value xsi:type="base_:ExpressionLangString" lang="English" content="URI for external reference"/>
+            </content>
+          </description>
+          <implementationConstraint>
+            <content>
+              <value lang="English" content=""/>
+            </content>
+          </implementationConstraint>
+        </artifactProperty>
+      </artifactElement>
+    </artifactPackage>
+    <argumentPackage xsi:type="gsn_:Module">
+      <name lang="English" content="AUV_GSN"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="AUV Safety Case in GSN"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+      <argumentationElement xsi:type="gsn_:Solution">
+        <name lang="English" content="FV1"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="Formal Verification"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </argumentationElement>
+      <argumentationElement xsi:type="gsn_:Goal">
+        <name lang="English" content="C1"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="The system is acceptably safe"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </argumentationElement>
+      <argumentationElement xsi:type="gsn_:Goal">
+        <name lang="English" content="C2"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="All identified hazards have been mitigated"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </argumentationElement>
+      <argumentationElement xsi:type="gsn_:Context" citedElement="//@assuranceCasePackage.0/@artifactPackage.0/@artifactElement.4">
+        <name lang="English" content="Hazard_Log"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="The Hazard Log"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </argumentationElement>
+      <argumentationElement xsi:type="gsn_:SupportedBy" source="//@assuranceCasePackage.0/@argumentPackage.0/@argumentationElement.1" target="//@assuranceCasePackage.0/@argumentPackage.0/@argumentationElement.2">
+        <name lang="English" content="SB1"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </argumentationElement>
+      <argumentationElement xsi:type="gsn_:InContextOf" source="//@assuranceCasePackage.0/@argumentPackage.0/@argumentationElement.2" target="//@assuranceCasePackage.0/@argumentPackage.0/@argumentationElement.3">
+        <name lang="English" content="IC1"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </argumentationElement>
+      <argumentationElement xsi:type="gsn_:Strategy">
+        <name lang="English" content="I1"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="Argument over all identified hazards"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </argumentationElement>
+      <argumentationElement xsi:type="gsn_:SupportedBy" source="//@assuranceCasePackage.0/@argumentPackage.0/@argumentationElement.2" target="//@assuranceCasePackage.0/@argumentPackage.0/@argumentationElement.6">
+        <name lang="English" content="SB2"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </argumentationElement>
+      <argumentationElement xsi:type="gsn_:Goal">
+        <name lang="English" content="C3"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="Hazard H1 is sufficiently mitigated">
+              <expression xsi:type="terminology_:Expression" value="Hazard H1 is sufficiently mitigated{H1}" element="//@assuranceCasePackage.0/@terminologyPackage.0/@terminologyElement.1"/>
+            </value>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </argumentationElement>
+      <argumentationElement xsi:type="gsn_:SupportedBy" source="//@assuranceCasePackage.0/@argumentPackage.0/@argumentationElement.6" target="//@assuranceCasePackage.0/@argumentPackage.0/@argumentationElement.8">
+        <name lang="English" content="SB3"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </argumentationElement>
+      <argumentationElement xsi:type="gsn_:SupportedBy" source="//@assuranceCasePackage.0/@argumentPackage.0/@argumentationElement.8" target="//@assuranceCasePackage.0/@argumentPackage.0/@argumentationElement.0">
+        <name lang="English" content="SB5"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </argumentationElement>
+      <argumentationElement xsi:type="gsn_:Goal" undeveloped="true">
+        <name lang="English" content="C4"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="Hazard H2 is sufficiently mitigated">
+              <expression xsi:type="terminology_:Expression" value="Hazard H2 is sufficiently mitigated{H2}" element="//@assuranceCasePackage.0/@terminologyPackage.0/@terminologyElement.2"/>
+            </value>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </argumentationElement>
+      <argumentationElement xsi:type="gsn_:SupportedBy" source="//@assuranceCasePackage.0/@argumentPackage.0/@argumentationElement.6" target="//@assuranceCasePackage.0/@argumentPackage.0/@argumentationElement.11">
+        <name lang="English" content="SB4"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </argumentationElement>
+    </argumentPackage>
+    <terminologyPackage>
+      <name lang="English" content="TP1"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Terminology Package for AUV"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+      <terminologyElement xsi:type="terminology_:Category">
+        <name lang="English" content="Hazard"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="Hazard Category&#xD;&#xA;">
+              <expression xsi:type="terminology_:Expression" value="Hazard Category&#xD;&#xA;">
+                <name lang="English" content="Hazard_description"/>
+              </expression>
+            </value>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </terminologyElement>
+      <terminologyElement xsi:type="terminology_:Term" value="H1" category="//@assuranceCasePackage.0/@terminologyPackage.0/@terminologyElement.0">
+        <name lang="English" content="H1"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="Hazard H1">
+              <expression xsi:type="terminology_:Expression" value="Hazard H1">
+                <name lang="English" content="H1_description"/>
+              </expression>
+            </value>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </terminologyElement>
+      <terminologyElement xsi:type="terminology_:Term" value="H2" category="//@assuranceCasePackage.0/@terminologyPackage.0/@terminologyElement.0">
+        <name lang="English" content="H2"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="Hazard H2">
+              <expression xsi:type="terminology_:Expression" value="Hazard H2">
+                <name lang="English" content="H2_description"/>
+              </expression>
+            </value>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </terminologyElement>
+    </terminologyPackage>
+  </assuranceCasePackage>
+</assuranceCase_:AssuranceCasePackage>

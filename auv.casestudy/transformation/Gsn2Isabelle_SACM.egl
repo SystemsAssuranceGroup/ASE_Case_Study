@@ -1,0 +1,120 @@
+[%
+import 'util.eol';
+var module_name = module.name.content;
+var processed_supportedBy = new Set;
+var elements = module.argumentationElement;
+var supportedBys = elements.select(e|e.isTypeOf(GSN!SupportedBy));
+var line_count = 0;
+"Generating Isabelle SACM...".println();
+%]
+theory [%=module_name%] [%increase_counter();%]
+
+	imports Main [%increase_counter();%]
+	
+begin [%increase_counter();%]
+
+[%
+var goals = module.argumentationElement.select(e|e.isTypeOf(GSN!Goal));
+for(element in goals) {
+	var name = getName(element);
+	var description = getDescription(element);
+	if(element.undeveloped) {%]
+	Claim [%=name%] needsSupport ‹ [%=description%] ›
+	[%}
+	else {%]
+	Claim [%=name%] ‹ [%=description%] ›
+	[%
+	}
+}
+
+var contexts = module.argumentationElement.select(e|e.isTypeOf(GSN!Context));
+for(element in contexts) {
+	var name = getName(element);
+	var description = getDescription(element);
+	%]
+	Claim [%=name%] ‹ [%=description%] ›
+	[%
+}
+
+var justifications = module.argumentationElement.select(e|e.isTypeOf(GSN!Justification));
+for(element in justifications) {
+	var name = getName(element);
+	var description = getDescription(element);
+	%]
+	Claim [%=name%] axiomatic ‹ [%=description%] ›
+	[%
+}
+
+var assumptions = module.argumentationElement.select(e|e.isTypeOf(GSN!Assumption));
+for(element in assumptions) {
+	var name = getName(element);
+	var description = getDescription(element);
+	%]
+	Claim [%=name%] assumed ‹ [%=description%] ›
+	[%
+}
+
+var solutions = module.argumentationElement.select(e|e.isTypeOf(GSN!Solution));
+for(element in solutions) {
+	var name = getName(element);
+	var description = getDescription(element);
+	%]
+	ArtifactReference [%=name%] ‹[%=description%]›
+	[%
+}
+%]
+
+[% //we want to process the strategies first
+var strategies = elements.select(e|e.isTypeOf(GSN!Strategy));
+for(strategy in strategies) {
+	var name = getName(strategy);
+	var description = getDescription(strategy);
+	var incomings = supportedBys.select(sb|sb.target.includes(strategy));
+	var outgoings = supportedBys.select(sb|sb.source.includes(strategy));
+	var targets = incomings.source.flatten();
+	var sources = outgoings.target.flatten();
+	%]
+	Inference [%=getName(incomings.first())%] src ‹{[%for(s in sources){%]@{Claim [%=getName(s)%]} [%}%]}› tgt ‹{@{Claim [%=getName(targets.first())%]}}›
+		‹ @{Claim [%=getName(targets.first())%]} is supported by [%for(s in sources){%]@{Claim [%=getName(s)%]} [%}%].›
+	[%
+	processed_supportedBy.addAll(targets);
+	processed_supportedBy.addAll(sources);
+}
+%]
+
+[% for(element in module.argumentationElement) { 
+if(element.isTypeOf(GSN!SupportedBy)) {
+	if(not processed_supportedBy.includes(element)){
+		var supportedBy = element;
+		var supportedBy_name = getName(element);
+		var source = supportedBy.target.first();
+		var target = supportedBy.source.first();
+		var source_name = getName(source);
+		var target_name = getName(target);
+		%]
+	Inference [%=supportedBy_name%] src ‹{@{Claim [%=source_name%]}}› tgt ‹{@{Claim [%=target_name%]}}›
+		‹ @{Claim [%=target_name%]} is supported by @{Claim [%=source_name%]}.›
+	
+		[%
+	}
+}
+else if(element.isTypeOf(GSN!InContextOf)) {
+	var inContextOf = element;
+	var inContextOf_name = getName(inContextOf);
+	var source = inContextOf.target.first();
+	var target = inContextOf.source.first();
+	var source_name = getName(source);
+	var target_name = getName(target);%]
+	Context [%=inContextOf_name%] src ‹{@{Claim [%=source_name%]}}› tgt ‹{@{Claim [%=target_name%]}}›
+		‹ @{Claim [%=target_name%]} is context for @{Claim [%=source_name%]}.›
+	[%
+}
+}%]
+end [%increase_counter();%]
+[%"Generation finished".println();%]
+[%line_count.println();%]
+[%operation increase_counter() {line_count = line_count + 1;}%]
+[%operation getName(element: Any) {return element.name.content;}%]
+[%operation getDescription(element: Any) {return element.description.content.value.first().content;}%]
+
+
