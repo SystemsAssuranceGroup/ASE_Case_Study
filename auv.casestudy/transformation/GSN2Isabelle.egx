@@ -1,5 +1,14 @@
 import 'util.eol';
 
+rule GenerateIsabelle
+	transform assurance_package : SACM!AssuranceCasePackage {
+	
+	template : "Gsn2Isabelle_SACM.egl"
+	
+	target : "../files/" + assurance_package.name.content + ".thy"
+}
+
+/*
 rule Module2Formalisation
 	transform module : GSN!Module {
 	
@@ -7,4 +16,5 @@ rule Module2Formalisation
 	
 	target : "../files/" + module.name.content + ".thy"
 }
+*/
 

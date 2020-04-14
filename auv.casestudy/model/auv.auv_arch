@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<auv_arc:AUV xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:auv_arc="http://auv.architecture/1.0" name="AUV" gid="0001">
+  <dimension width="338" height="254" length="457"/>
+</auv_arc:AUV>

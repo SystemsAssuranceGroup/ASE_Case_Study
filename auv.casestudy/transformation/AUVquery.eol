@@ -1,0 +1,20 @@
+var reqOCM = Event.all().select(e|e.name = "reqOCM").first();
+var endTask = Event.all().select(e|e.name = "endTask").first();
+var ocm = State.all().select(s|s.name = "OCM").first();
+var initial = Initial.all().select(s|s.name = "i0").first();
+var initial_transition = Transition.all().select(t|t.source = initial);
+if(initial_transition.size() = 1) {
+	if(initial_transition.target.size() = 1 and initial_transition.target.first() = ocm)
+	{
+		var transitionsToOCM = Transition.all().select(t|t.source <> initial and t.target = ocm and 
+		t.source <> ocm and t.trigger._type <> TriggerType#EMPTY);
+		for(transition in transitionsToOCM) {
+			if((transition.trigger.event = reqOCM) or (transition.trigger.event = endTask)) {
+			}
+			else {
+				return result;
+			}
+		}
+	}
+}
+return true;
