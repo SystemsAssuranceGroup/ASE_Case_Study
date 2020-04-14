@@ -9,7 +9,7 @@ var line_count = 0;
 %]
 theory [%=module_name%] [%increase_counter();%]
 
-	imports Main [%increase_counter();%]
+	imports "Isabelle_SACM.Isa_SACM" [%increase_counter();%]
 	
 begin [%increase_counter();%]
 
@@ -63,7 +63,6 @@ for(element in solutions) {
 	[%
 }
 %]
-
 [% //we want to process the strategies first
 var strategies = elements.select(e|e.isTypeOf(GSN!Strategy));
 for(strategy in strategies) {
@@ -73,15 +72,18 @@ for(strategy in strategies) {
 	var outgoings = supportedBys.select(sb|sb.source.includes(strategy));
 	var targets = incomings.source.flatten();
 	var sources = outgoings.target.flatten();
+	var source_names = "@{Claim" + getName(sources.first()) + "}";
+	for(i in Sequence{1..sources.size()-1}) {
+		source_names = source_names + ", " + "@{Claim" + getName(sources.at(i)) + "}";
+	}
 	%]
-	Inference [%=getName(incomings.first())%] src ‹{[%for(s in sources){%]@{Claim [%=getName(s)%]} [%}%]}› tgt ‹{@{Claim [%=getName(targets.first())%]}}›
-		‹ @{Claim [%=getName(targets.first())%]} is supported by [%for(s in sources){%]@{Claim [%=getName(s)%]} [%}%].›
+	Inference [%=getName(incomings.first())%] src ‹{[%=source_names%]}› tgt ‹{@{Claim [%=getName(targets.first())%]}}›
+		‹ @{Claim [%=getName(targets.first())%]} is supported by [%=source_names%].›
 	[%
 	processed_supportedBy.addAll(targets);
 	processed_supportedBy.addAll(sources);
 }
 %]
-
 [% for(element in module.argumentationElement) { 
 if(element.isTypeOf(GSN!SupportedBy)) {
 	if(not processed_supportedBy.includes(element)){
@@ -91,11 +93,18 @@ if(element.isTypeOf(GSN!SupportedBy)) {
 		var target = supportedBy.source.first();
 		var source_name = getName(source);
 		var target_name = getName(target);
+		if(source.isTypeOf(GSN!Solution)) {
+		%]
+	Inference [%=supportedBy_name%] src ‹{@{ArtifactReference [%=source_name%]}}› tgt ‹{@{Claim [%=target_name%]}}›
+		‹ @{Claim [%=target_name%]} is supported by @{ArtifactReference [%=source_name%]}.›
+		[%
+		}
+		else {
 		%]
 	Inference [%=supportedBy_name%] src ‹{@{Claim [%=source_name%]}}› tgt ‹{@{Claim [%=target_name%]}}›
 		‹ @{Claim [%=target_name%]} is supported by @{Claim [%=source_name%]}.›
-	
 		[%
+		}
 	}
 }
 else if(element.isTypeOf(GSN!InContextOf)) {

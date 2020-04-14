@@ -5,6 +5,6 @@ rule Module2Formalisation
 	
 	template : "Gsn2Isabelle_SACM.egl"
 	
-	target : "../files/" + module.name.content + ".html"
+	target : "../files/" + module.name.content + ".thy"
 }
 

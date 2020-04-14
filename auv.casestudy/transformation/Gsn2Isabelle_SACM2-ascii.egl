@@ -19,10 +19,10 @@ for(element in goals) {
 	var name = getName(element);
 	var description = getDescription(element);
 	if(element.undeveloped) {%]
-	Claim [%=name%] needsSupport ‹ [%=description%] ›
+	Claim [%=name%] needsSupport < [%=description%] >
 	[%}
 	else {%]
-	Claim [%=name%] ‹ [%=description%] ›
+	Claim [%=name%] < [%=description%] >
 	[%
 	}
 }
@@ -32,7 +32,7 @@ for(element in contexts) {
 	var name = getName(element);
 	var description = getDescription(element);
 	%]
-	Claim [%=name%] ‹ [%=description%] ›
+	Claim [%=name%] < [%=description%] >
 	[%
 }
 
@@ -41,7 +41,7 @@ for(element in justifications) {
 	var name = getName(element);
 	var description = getDescription(element);
 	%]
-	Claim [%=name%] axiomatic ‹ [%=description%] ›
+	Claim [%=name%] axiomatic < [%=description%] >
 	[%
 }
 
@@ -50,7 +50,7 @@ for(element in assumptions) {
 	var name = getName(element);
 	var description = getDescription(element);
 	%]
-	Claim [%=name%] assumed ‹ [%=description%] ›
+	Claim [%=name%] assumed < [%=description%] >
 	[%
 }
 
@@ -59,7 +59,7 @@ for(element in solutions) {
 	var name = getName(element);
 	var description = getDescription(element);
 	%]
-	ArtifactReference [%=name%] ‹[%=description%]›
+	ArtifactReference [%=name%] <[%=description%]>
 	[%
 }
 %]
@@ -74,8 +74,8 @@ for(strategy in strategies) {
 	var targets = incomings.source.flatten();
 	var sources = outgoings.target.flatten();
 	%]
-	Inference [%=getName(incomings.first())%] src ‹{[%for(s in sources){%]@{Claim [%=getName(s)%]} [%}%]}› tgt ‹{@{Claim [%=getName(targets.first())%]}}›
-		‹ @{Claim [%=getName(targets.first())%]} is supported by [%for(s in sources){%]@{Claim [%=getName(s)%]} [%}%].›
+	Inference [%=getName(incomings.first())%] src <{[%for(s in sources){%]@{Claim [%=getName(s)%]} [%}%]}> tgt <{@{Claim [%=getName(targets.first())%]}}>
+		< @{Claim [%=getName(targets.first())%]} is supported by [%for(s in sources){%]@{Claim [%=getName(s)%]} [%}%].>
 	[%
 	processed_supportedBy.addAll(targets);
 	processed_supportedBy.addAll(sources);
@@ -92,8 +92,8 @@ if(element.isTypeOf(GSN!SupportedBy)) {
 		var source_name = getName(source);
 		var target_name = getName(target);
 		%]
-	Inference [%=supportedBy_name%] src ‹{@{Claim [%=source_name%]}}› tgt ‹{@{Claim [%=target_name%]}}›
-		‹ @{Claim [%=target_name%]} is supported by @{Claim [%=source_name%]}.›
+	Inference [%=supportedBy_name%] src <{@{Claim [%=source_name%]}}> tgt <{@{Claim [%=target_name%]}}>
+		< @{Claim [%=target_name%]} is supported by @{Claim [%=source_name%]}.>
 	
 		[%
 	}
@@ -105,8 +105,8 @@ else if(element.isTypeOf(GSN!InContextOf)) {
 	var target = inContextOf.source.first();
 	var source_name = getName(source);
 	var target_name = getName(target);%]
-	Context [%=inContextOf_name%] src ‹{@{Claim [%=source_name%]}}› tgt ‹{@{Claim [%=target_name%]}}›
-		‹ @{Claim [%=target_name%]} is context for @{Claim [%=source_name%]}.›
+	Context [%=inContextOf_name%] src <{@{Claim [%=source_name%]}}> tgt <{@{Claim [%=target_name%]}}>
+		< @{Claim [%=target_name%]} is context for @{Claim [%=source_name%]}.>
 	[%
 }
 }%]
