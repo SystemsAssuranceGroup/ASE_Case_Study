@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<assuranceCase_:AssuranceCasePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:artifact_="http://omg.sacm/2.0/artifact" xmlns:assuranceCase_="http://omg.sacm/2.0/assurancecase" xmlns:base_="http://omg.sacm/2.0/base" xmlns:gsn_="http://org.eclipse.acme/1.0/gsn">
+<assuranceCase_:AssuranceCasePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:artifact_="http://omg.sacm/2.0/artifact" xmlns:assuranceCase_="http://omg.sacm/2.0/assurancecase" xmlns:base_="http://omg.sacm/2.0/base" xmlns:gsn_="http://org.eclipse.acme/1.0/gsn" xmlns:terminology_="http://omg.sacm/2.0/terminology">
   <name lang="English" content="AC_AUV"/>
   <description>
     <content>
@@ -58,7 +58,7 @@
       </description>
       <implementationConstraint>
         <content>
-          <value lang="English" content="var reqOCM = Event.all().select(e|e.name = &quot;reqOCM&quot;).first();&#xD;&#xA;var endTask = Event.all().select(e|e.name = &quot;endTask&quot;).first();&#xD;&#xA;var ocm = State.all().select(s|s.name = &quot;OCM&quot;).first();&#xD;&#xA;var initial = Initial.all().select(s|s.name = &quot;i0&quot;).first();&#xD;&#xA;var initial_transition = Transition.all().select(t|t.source = initial);&#xD;&#xA;if(initial_transition.size() = 1) {&#xD;&#xA;&#x9;if(initial_transition.target.size() = 1 and initial_transition.target.first() = ocm)&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;var transitionsToOCM = Transition.all().select(t|t.source &lt;> initial and t.target = ocm and &#xD;&#xA;&#x9;&#x9;t.source &lt;> ocm and t.trigger._type &lt;> TriggerType#EMPTY);&#xD;&#xA;&#x9;&#x9;for(transition in transitionsToOCM) {&#xD;&#xA;&#x9;&#x9;&#x9;if((transition.trigger.event = reqOCM) or (transition.trigger.event = endTask)) {&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;return result;&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;return true;"/>
+          <value lang="English" content="var reqOCM = Event.all().select(e|e.name = &quot;reqOCM&quot;).first();&#xD;&#xA;var endTask = Event.all().select(e|e.name = &quot;endTask&quot;).first();&#xD;&#xA;var ocm = State.all().select(s|s.name = &quot;OCM&quot;).first();&#xD;&#xA;var initial = Initial.all().select(s|s.name = &quot;i0&quot;).first();&#xD;&#xA;var initial_transition = Transition.all().select(t|t.source = initial);&#xD;&#xA;if(initial_transition.size() = 1) {&#xD;&#xA;&#x9;if(initial_transition.target.size() = 1 and initial_transition.target.first() = ocm)&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;var transitionsToOCM = Transition.all().select(t|t.source &lt;> initial and t.target = ocm and &#xD;&#xA;&#x9;&#x9;t.source &lt;> ocm and t.trigger._type &lt;> TriggerType#EMPTY and t.trigger.event &lt;> null);&#xD;&#xA;&#x9;&#x9;for(transition in transitionsToOCM) {&#xD;&#xA;&#x9;&#x9;&#x9;if((transition.trigger.event = reqOCM) or (transition.trigger.event = endTask)) {&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;return false;&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;return true;"/>
         </content>
       </implementationConstraint>
       <artifactProperty>
@@ -84,14 +84,14 @@
       </description>
       <implementationConstraint>
         <content>
-          <value lang="English" content=""/>
+          <value lang="English" content="return HazardousSituation.all().exists(h|h.name = &quot;H1&quot;);"/>
         </content>
       </implementationConstraint>
       <artifactProperty>
         <name lang="English" content="URI"/>
         <description>
           <content>
-            <value xsi:type="base_:ExpressionLangString" lang="English" content="URI for external reference"/>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\Isabelle_example\auv.casestudy\model\hazardlog.model"/>
           </content>
         </description>
         <implementationConstraint>
@@ -245,7 +245,7 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Goal" undeveloped="true">
-      <name lang="English" content="Name"/>
+      <name lang="English" content="G4"/>
       <description>
         <content>
           <value xsi:type="base_:ExpressionLangString" lang="English" content="Hazard H2 is sufficiently mitigated"/>
@@ -309,6 +309,58 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
+    <argumentationElement xsi:type="gsn_:Goal">
+      <name lang="English" content="G5"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Requirement R1 is met"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
+    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.5" target="//@argumentPackage.0/@argumentationElement.13">
+      <name lang="English" content="Name"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
+    <argumentationElement xsi:type="gsn_:Solution" citedElement="//@artifactPackage.0/@artifactElement.0">
+      <name lang="English" content="Sn2"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Model validation with Architecture model"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
+    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.13" target="//@argumentPackage.0/@argumentationElement.15">
+      <name lang="English" content="Name"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
   </argumentPackage>
   <terminologyPackage>
     <name lang="English" content="AUV_Terminology"/>
@@ -322,5 +374,39 @@
         <value lang="English" content=""/>
       </content>
     </implementationConstraint>
+    <terminologyElement xsi:type="terminology_:Category">
+      <name lang="English" content="Hazard"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Terminologies for AUV &#xD;&#xA;assurance">
+            <expression xsi:type="terminology_:Expression" value="Terminologies for AUV &#xD;&#xA;assurance">
+              <name lang="English" content="Hazard_description"/>
+            </expression>
+          </value>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </terminologyElement>
+    <terminologyElement xsi:type="terminology_:Term" value="H1" category="//@terminologyPackage.0/@terminologyElement.0" externalReference="C:\Users\rwei\Git\Isabelle_example\auv.casestudy\model\hazardlog.model">
+      <name lang="English" content="H1"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Hazard H1">
+            <expression xsi:type="terminology_:Expression" value="Hazard H1">
+              <name lang="English" content="H1_description"/>
+            </expression>
+          </value>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content="return HazardousSituation.all().select(h|h.name = &quot;H1&quot;);"/>
+        </content>
+      </implementationConstraint>
+    </terminologyElement>
   </terminologyPackage>
 </assuranceCase_:AssuranceCasePackage>

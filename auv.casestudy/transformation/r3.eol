@@ -7,12 +7,12 @@ if(initial_transition.size() = 1) {
 	if(initial_transition.target.size() = 1 and initial_transition.target.first() = ocm)
 	{
 		var transitionsToOCM = Transition.all().select(t|t.source <> initial and t.target = ocm and 
-		t.source <> ocm and t.trigger._type <> TriggerType#EMPTY);
+		t.source <> ocm and t.trigger._type <> TriggerType#EMPTY and t.trigger.event <> null);
 		for(transition in transitionsToOCM) {
 			if((transition.trigger.event = reqOCM) or (transition.trigger.event = endTask)) {
 			}
 			else {
-				return result;
+				return false;
 			}
 		}
 	}

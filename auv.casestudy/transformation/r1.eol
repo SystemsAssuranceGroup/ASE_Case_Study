@@ -1,0 +1,2 @@
+var auv_dim = AUV.all().first().dimension;
+return (auv_dim.length = 457 and auv_dim.width = 338 and auv_dim.height = 254);
