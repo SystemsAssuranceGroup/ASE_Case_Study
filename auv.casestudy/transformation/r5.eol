@@ -1,0 +1,13 @@
+var mom = State.all().select(s|s.name = "MOM").first();
+var entry_action = mom.actions.select(a|a.isTypeOf(EntryAction)).first();
+var advVel = Event.all().select(e|e.name = "advVel").first();
+if(entry_action.isDefined()) {
+	if(entry_action.action.isTypeOf(SendEvent)) {
+		var send_event = entry_action.action;
+		var trigger = send_event.trigger;
+		if(trigger.event = advVel and trigger.value.value = 1) {
+			return true;
+		}
+	}
+}
+return false;

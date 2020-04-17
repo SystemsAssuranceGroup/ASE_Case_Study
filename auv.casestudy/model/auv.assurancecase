@@ -50,32 +50,6 @@
       </artifactProperty>
     </artifactElement>
     <artifactElement xsi:type="artifact_:Artifact">
-      <name lang="English" content="R2"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="When, and only when, in OCM, the LRE shall accept operator control inputs and send them to the autopilot."/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-      <artifactProperty>
-        <name lang="English" content="URI"/>
-        <description>
-          <content>
-            <value xsi:type="base_:ExpressionLangString" lang="English" content="URI for external reference"/>
-          </content>
-        </description>
-        <implementationConstraint>
-          <content>
-            <value lang="English" content=""/>
-          </content>
-        </implementationConstraint>
-      </artifactProperty>
-    </artifactElement>
-    <artifactElement xsi:type="artifact_:Artifact">
       <name lang="English" content="R3"/>
       <description>
         <content>
@@ -102,10 +76,10 @@
       </artifactProperty>
     </artifactElement>
     <artifactElement xsi:type="artifact_:Artifact">
-      <name lang="English" content="R4"/>
+      <name lang="English" content="Hazard_Log"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="The LRE shall enter MOM from OCM when the following conditions hold: (i) the velocity is less than 0.1ms-1; (ii) the distance to a static obstacle is > 300mm; (iii) the distance to a dynamic obstacle is greater than 7500mm; (iv) the operator requests it; and (v) the AUV is not in an OPEZ."/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Hazard log"/>
         </content>
       </description>
       <implementationConstraint>
@@ -128,22 +102,22 @@
       </artifactProperty>
     </artifactElement>
     <artifactElement xsi:type="artifact_:Artifact">
-      <name lang="English" content="Hazard_Log"/>
+      <name lang="English" content="R5"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Hazard log"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="On entering MOM, the LRE shall advise a velocity of 1ms-1."/>
         </content>
       </description>
       <implementationConstraint>
         <content>
-          <value lang="English" content=""/>
+          <value lang="English" content="var mom = State.all().select(s|s.name = &quot;MOM&quot;).first();&#xD;&#xA;var entry_action = mom.actions.select(a|a.isTypeOf(EntryAction)).first();&#xD;&#xA;var advVel = Event.all().select(e|e.name = &quot;advVel&quot;).first();&#xD;&#xA;if(entry_action.isDefined()) {&#xD;&#xA;&#x9;if(entry_action.action.isTypeOf(SendEvent)) {&#xD;&#xA;&#x9;&#x9;var send_event = entry_action.action;&#xD;&#xA;&#x9;&#x9;var trigger = send_event.trigger;&#xD;&#xA;&#x9;&#x9;if(trigger.event = advVel and trigger.value.value = 1) {&#xD;&#xA;&#x9;&#x9;&#x9;return true;&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;return false;&#xD;&#xA;"/>
         </content>
       </implementationConstraint>
       <artifactProperty>
         <name lang="English" content="URI"/>
         <description>
           <content>
-            <value xsi:type="base_:ExpressionLangString" lang="English" content="URI for external reference"/>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\Isabelle_example\auv.casestudy\model\auv.model"/>
           </content>
         </description>
         <implementationConstraint>
