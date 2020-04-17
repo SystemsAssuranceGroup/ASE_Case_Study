@@ -16,5 +16,8 @@ if(initial_transition.size() = 1) {
 			}
 		}
 	}
+	else {
+		return false;
+	}
 }
 return true;

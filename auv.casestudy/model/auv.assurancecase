@@ -58,7 +58,7 @@
       </description>
       <implementationConstraint>
         <content>
-          <value lang="English" content="var reqOCM = Event.all().select(e|e.name = &quot;reqOCM&quot;).first();&#xD;&#xA;var endTask = Event.all().select(e|e.name = &quot;endTask&quot;).first();&#xD;&#xA;var ocm = State.all().select(s|s.name = &quot;OCM&quot;).first();&#xD;&#xA;var initial = Initial.all().select(s|s.name = &quot;i0&quot;).first();&#xD;&#xA;var initial_transition = Transition.all().select(t|t.source = initial);&#xD;&#xA;if(initial_transition.size() = 1) {&#xD;&#xA;&#x9;if(initial_transition.target.size() = 1 and initial_transition.target.first() = ocm)&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;var transitionsToOCM = Transition.all().select(t|t.source &lt;> initial and t.target = ocm and &#xD;&#xA;&#x9;&#x9;t.source &lt;> ocm and t.trigger._type &lt;> TriggerType#EMPTY and t.trigger.event &lt;> null);&#xD;&#xA;&#x9;&#x9;for(transition in transitionsToOCM) {&#xD;&#xA;&#x9;&#x9;&#x9;if((transition.trigger.event = reqOCM) or (transition.trigger.event = endTask)) {&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;return false;&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;return true;"/>
+          <value lang="English" content="var reqOCM = Event.all().select(e|e.name = &quot;reqOCM&quot;).first();&#xD;&#xA;var endTask = Event.all().select(e|e.name = &quot;endTask&quot;).first();&#xD;&#xA;var ocm = State.all().select(s|s.name = &quot;OCM&quot;).first();&#xD;&#xA;var initial = Initial.all().select(s|s.name = &quot;i0&quot;).first();&#xD;&#xA;var initial_transition = Transition.all().select(t|t.source = initial);&#xD;&#xA;if(initial_transition.size() = 1) {&#xD;&#xA;&#x9;if(initial_transition.target.size() = 1 and initial_transition.target.first() = ocm)&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;var transitionsToOCM = Transition.all().select(t|t.source &lt;> initial and t.target = ocm and &#xD;&#xA;&#x9;&#x9;t.source &lt;> ocm and t.trigger._type &lt;> TriggerType#EMPTY and t.trigger.event &lt;> null);&#xD;&#xA;&#x9;&#x9;for(transition in transitionsToOCM) {&#xD;&#xA;&#x9;&#x9;&#x9;if((transition.trigger.event = reqOCM) or (transition.trigger.event = endTask)) {&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;return false;&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else {&#xD;&#xA;&#x9;&#x9;return false;&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;return true;&#xD;&#xA;"/>
         </content>
       </implementationConstraint>
       <artifactProperty>
@@ -166,7 +166,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Context">
+    <argumentationElement xsi:type="gsn_:Context" citedElement="//@artifactPackage.0/@artifactElement.2">
       <name lang="English" content="Hazard_Log"/>
       <description>
         <content>

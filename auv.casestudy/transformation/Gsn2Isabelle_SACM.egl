@@ -14,19 +14,6 @@ theory [%=module_name%] [%increase_counter();%]
 begin [%increase_counter();%]
 
 [%
-var goals = module.argumentationElement.select(e|e.isTypeOf(GSN!Goal));
-for(element in goals) {
-	var name = getName(element);
-	var description = getDescription(element);
-	if(element.undeveloped) {%]
-	Claim [%=name%] needsSupport ‹ [%=description%] ›
-	[%}
-	else {%]
-	Claim [%=name%] ‹ [%=description%] ›
-	[%
-	}
-}
-
 var contexts = module.argumentationElement.select(e|e.isTypeOf(GSN!Context));
 for(element in contexts) {
 	var name = getName(element);
@@ -52,6 +39,19 @@ for(element in assumptions) {
 	%]
 	Claim [%=name%] assumed ‹ [%=description%] ›
 	[%
+}
+
+var goals = module.argumentationElement.select(e|e.isTypeOf(GSN!Goal));
+for(element in goals) {
+	var name = getName(element);
+	var description = getDescription(element);
+	if(element.undeveloped) {%]
+	Claim [%=name%] needsSupport ‹ [%=description%] ›
+	[%}
+	else {%]
+	Claim [%=name%] ‹ [%=description%] ›
+	[%
+	}
 }
 
 var solutions = module.argumentationElement.select(e|e.isTypeOf(GSN!Solution));
