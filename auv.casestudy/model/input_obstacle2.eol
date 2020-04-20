@@ -1,0 +1,7 @@
+var obstacle = new ObstacleReading;
+obstacle.ns_rel_dist = 20;
+obstacle.ew_rel_dist = 20;
+obstacle.obs_depth = -2;
+obstacle.obs_ns_vel = 1;
+obstacle.obs_ew_vel = 1;
+obstacle.obs_roc = 1;

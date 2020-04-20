@@ -1,0 +1,26 @@
+@namespace(uri="http://auv.data/1.0", prefix="auv_data")
+package auv_architecture;
+
+
+class AbstractDataElement {
+	attr String gid;
+	attr String time_stamp;
+} 
+
+class InputParameter extends AbstractDataElement {
+	attr float depth;
+	attr float ns_vel;
+	attr float ew_vel;
+	attr float rate_of_climb;
+}
+
+class ObstacleReading extends AbstractDataElement {
+	attr float ns_rel_dist;
+	attr float ew_rel_dist;
+	attr float obs_depth;
+	attr float obs_ns_vel;
+	attr float obs_ew_vel;
+	attr float obs_roc;
+}
+
+

@@ -1,0 +1,5 @@
+var param = new InputParameter;
+param.depth = -3.0;
+param.ns_vel = 1.0;
+param.ew_vel = 2.0;
+param.rate_of_climb = 1.0;
