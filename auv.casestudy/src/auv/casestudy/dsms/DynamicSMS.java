@@ -4,8 +4,8 @@ import java.io.File;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.eclipse.epsilon.common.parse.problem.ParseProblem;
 import org.eclipse.epsilon.common.util.StringProperties;
@@ -14,7 +14,6 @@ import org.eclipse.epsilon.eol.EolModule;
 import org.eclipse.epsilon.eol.exceptions.models.EolModelLoadingException;
 import org.eclipse.epsilon.eol.models.IModel;
 import org.eclipse.epsilon.eol.models.IRelativePathResolver;
-import org.eclipse.epsilon.eol.parse.Eol_EolParserRules.returnStatement_return;
 
 import argumentation.Argumentation_Package;
 import artifact.Artifact;
@@ -32,13 +31,16 @@ public class DynamicSMS {
 	protected String safety_case_location;
 	protected String models_location;
 	protected Object result;
-	private static List<Object> metamodels = new ArrayList<Object>();
+	protected int cycles;
+	protected int time_interval;
 
 
 	public static void main(String[] args) {
 		DynamicSMS dsms = new DynamicSMS("model/auv.assurancecase", "model/");
+		dsms.setCycles(1000);
+		dsms.setTime_interval(200);
 		try {
-			dsms.validate();
+			dsms.run();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -52,6 +54,29 @@ public class DynamicSMS {
 		eolModule = new EolModule();
 	}
 	
+	public void setCycles(int cycles) {
+		this.cycles = cycles;
+	}
+	
+	public void setTime_interval(int time_interval) {
+		this.time_interval = time_interval;
+	}
+	
+	public void run() throws Exception {
+		for(int i = 0; i < cycles; i++) {
+			System.out.println("Validation Cycle:" + i);
+			boolean result = validate();
+			if (result) {
+				System.out.println("Validation Cycle:" + i + " passed.");	
+			}
+			else {
+				System.err.println("Validation Cycle:" + i + " failed.");
+			}
+			TimeUnit.MILLISECONDS.sleep(time_interval);
+		}
+	}
+	
+	
 	public boolean validate() throws Exception {
 		for(ModelElement modelElement : getArtifacts()) {
 			Artifact artifact = (Artifact) modelElement;
@@ -59,11 +84,14 @@ public class DynamicSMS {
 			if (path != null) {
 				String query = artifact.getImplementationConstraint().get(0).getContent().getValue().get(0).getContent();
 				String fileName = getFileName(path);
-				String extension = getFileExtensions(fileName);
-				System.out.println(fileName);
-				System.out.println(getEcoreName(extension));
+				String metamodelName = getEcoreName(getFileExtensions(fileName));
+				ValidationTask task = new ValidationTask("m", "model/"+fileName, "model/"+metamodelName, query);
+//				System.out.println("validating " + fileName + "...");
+				if (!task.validate()) {
+					return false;
+				}
+//				System.out.println("done");
 			}
-			
 		}
 		return true;
 	}
@@ -87,7 +115,7 @@ public class DynamicSMS {
 	
 
 	public List<ModelElement> getArtifacts() throws Exception {
-		String query = "var artifacts = Artifact.all(); return artifacts;";
+		String query = "var artifacts = M!Artifact.all(); return artifacts;";
 		eolModule.parse(query);
 		if (eolModule.getParseProblems().size() > 0) {
 			System.err.println("Parse errors occured...");

@@ -39,7 +39,7 @@
         <name lang="English" content="URI"/>
         <description>
           <content>
-            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\Isabelle_example\auv.casestudy\model\auv.auv_arch"/>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\ASE_Case_Study\auv.casestudy\model\auv.auv_architecture"/>
           </content>
         </description>
         <implementationConstraint>
@@ -65,7 +65,7 @@
         <name lang="English" content="URI"/>
         <description>
           <content>
-            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\Isabelle_example\auv.casestudy\model\auv.model"/>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\ASE_Case_Study\auv.casestudy\model\auv.robochart"/>
           </content>
         </description>
         <implementationConstraint>
@@ -91,7 +91,7 @@
         <name lang="English" content="URI"/>
         <description>
           <content>
-            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\Isabelle_example\auv.casestudy\model\hazardlog.model"/>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\ASE_Case_Study\auv.casestudy\model\hazardlog.hazardlog"/>
           </content>
         </description>
         <implementationConstraint>
@@ -117,7 +117,7 @@
         <name lang="English" content="URI"/>
         <description>
           <content>
-            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\Isabelle_example\auv.casestudy\model\auv.model"/>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\ASE_Case_Study\auv.casestudy\model\auv.robochart"/>
           </content>
         </description>
         <implementationConstraint>
