@@ -85,7 +85,7 @@ public class DynamicSMS {
 				String query = artifact.getImplementationConstraint().get(0).getContent().getValue().get(0).getContent();
 				String fileName = getFileName(path);
 				String metamodelName = getEcoreName(getFileExtensions(fileName));
-				ValidationTask task = new ValidationTask("m", "model/"+fileName, "model/"+metamodelName, query);
+				ValidationTask task = new ValidationTask("M", "model/"+fileName, "model/"+metamodelName, query);
 //				System.out.println("validating " + fileName + "...");
 				if (!task.validate()) {
 					return false;

@@ -127,6 +127,32 @@
         </implementationConstraint>
       </artifactProperty>
     </artifactElement>
+    <artifactElement xsi:type="artifact_:Artifact">
+      <name lang="English" content="LRE_Input"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE input should be in range"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content="var param = M!InputParameter.all().first();&#xD;&#xA;return (param.depth >= -10.0 and param.depth &lt;= 0.0)&#xD;&#xA;&#x9;and (param.ns_vel >= -5.0 and param.ns_vel &lt;= 5.0)&#xD;&#xA;&#x9;and (param.ew_vel >= -5.0 and param.ew_vel &lt;= 5.0)&#xD;&#xA;&#x9;and (param.rate_of_climb >= -5.0 and param.rate_of_climb &lt;= 5.0);"/>
+        </content>
+      </implementationConstraint>
+      <artifactProperty>
+        <name lang="English" content="URI"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\ASE_Case_Study\auv.casestudy\model\input.auv_data"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </artifactProperty>
+    </artifactElement>
   </artifactPackage>
   <argumentPackage xsi:type="gsn_:Module">
     <name lang="English" content="AUV_GSN"/>
@@ -426,7 +452,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Solution">
+    <argumentationElement xsi:type="gsn_:Solution" citedElement="//@artifactPackage.0/@artifactElement.4">
       <name lang="English" content="Sn1"/>
       <description>
         <content>

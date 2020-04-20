@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="ASCII"?>
-<auv_data:InputParameter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:auv_data="http://auv.data/1.0" xsi:schemaLocation="http://auv.data/1.0 auv_data.ecore" depth="-4.0" ns_vel="3.0" ew_vel="2.0" rate_of_climb="2.0"/>
+<auv_data:InputParameter xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:auv_data="http://auv.data/1.0" xsi:schemaLocation="http://auv.data/1.0 auv_data.ecore" depth="-5.0" ns_vel="3.0" ew_vel="2.0" rate_of_climb="2.0"/>

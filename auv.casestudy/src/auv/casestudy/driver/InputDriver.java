@@ -26,7 +26,7 @@ public class InputDriver extends AbstractExecutor{
 	@Override
 	public List<IModel> getModels() throws Exception {
 		List<IModel> models = new ArrayList<>();
-		models.add(createEmfModel("M", "model/input.input", "model/auv_data.ecore", false, true));
+		models.add(createEmfModel("M", "model/input.auv_data", "model/auv_data.ecore", false, true));
 		return models;
 	}
 	
@@ -46,7 +46,7 @@ public class InputDriver extends AbstractExecutor{
 	}
 	
 	public static void main(String[] args) {
-		InputDriver driver = new InputDriver("-4.0", "3.0", "2.0", "2.0");
+		InputDriver driver = new InputDriver("-5.0", "3.0", "2.0", "2.0");
 		try {
 			driver.execute();
 		} catch (Exception e) {

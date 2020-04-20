@@ -1,0 +1,5 @@
+var param = M!InputParameter.all().first();
+return (param.depth >= -10.0 and param.depth <= 0.0)
+	and (param.ns_vel >= -5.0 and param.ns_vel <= 5.0)
+	and (param.ew_vel >= -5.0 and param.ew_vel <= 5.0)
+	and (param.rate_of_climb >= -5.0 and param.rate_of_climb <= 5.0);
