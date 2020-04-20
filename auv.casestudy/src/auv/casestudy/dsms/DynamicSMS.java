@@ -64,7 +64,7 @@ public class DynamicSMS {
 	
 	public void run() throws Exception {
 		for(int i = 0; i < cycles; i++) {
-			System.out.println("Validation Cycle:" + i);
+//			System.out.println("Validation Cycle:" + i);
 			boolean result = validate();
 			if (result) {
 				System.out.println("Validation Cycle:" + i + " passed.");	

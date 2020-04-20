@@ -46,6 +46,7 @@ public class InputDriver extends AbstractExecutor{
 	}
 	
 	public static void main(String[] args) {
+		//valid range {-10..0}, {-5..5}, {-5..5} and {-5..5}
 		InputDriver driver = new InputDriver("-5.0", "3.0", "2.0", "2.0");
 		try {
 			driver.execute();
