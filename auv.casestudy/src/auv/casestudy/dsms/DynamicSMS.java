@@ -136,7 +136,8 @@ public class DynamicSMS {
 	}
 
 	public IModel getModel() throws Exception {
-		return createEmfModelByURI("M", safety_case_location, "http://org.eclipse.acme/1.0/gsn, "
+		return createEmfModelByURI("M", safety_case_location, 
+				"http://org.eclipse.acme/1.0/gsn, "
 				+ "http://omg.sacm/2.0/artifact, "
 				+ "http://omg.sacm/2.0/argumentation, "
 				+ "http://omg.sacm/2.0/base, "

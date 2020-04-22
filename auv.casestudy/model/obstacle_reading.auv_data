@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="ASCII"?>
+<auv_data:ObstacleReading xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:auv_data="http://auv.data/1.0" xsi:schemaLocation="http://auv.data/1.0 auv_data.ecore" ns_rel_dist="-5.0" ew_rel_dist="-5.0" obs_depth="-5.0" obs_ns_vel="3.0" obs_ew_vel="2.0" obs_roc="2.0"/>

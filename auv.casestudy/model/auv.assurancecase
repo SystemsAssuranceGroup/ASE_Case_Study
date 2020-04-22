@@ -153,6 +153,32 @@
         </implementationConstraint>
       </artifactProperty>
     </artifactElement>
+    <artifactElement xsi:type="artifact_:Artifact">
+      <name lang="English" content="Obstacle_Reading"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Obstacle readings are accurate."/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content="var reading = M!ObstacleReading.all().first();&#xD;&#xA;return (reading.ns_rel_dist >= -50.0 and reading.ns_rel_dist &lt;= 50.0)&#xD;&#xA;&#x9;and  (reading.ew_rel_dist >= -50.0 and reading.ew_rel_dist &lt;= 50.0)&#xD;&#xA;&#x9;and  (reading.obs_depth >= -10.0 and reading.obs_depth &lt;= 0.0)&#xD;&#xA;&#x9;and  (reading.obs_ns_vel >= -5.0 and reading.obs_ns_vel &lt;= 5.0)&#xD;&#xA;&#x9;and  (reading.obs_ew_vel >= -5.0 and reading.obs_ew_vel &lt;= 5.0)&#xD;&#xA;&#x9;and  (reading.obs_roc >= -5.0 and reading.obs_roc &lt;= 5.0);&#xD;&#xA;"/>
+        </content>
+      </implementationConstraint>
+      <artifactProperty>
+        <name lang="English" content="URI"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\ASE_Case_Study\auv.casestudy\model\obstacle_reading.auv_data"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </artifactProperty>
+    </artifactElement>
   </artifactPackage>
   <argumentPackage xsi:type="gsn_:Module">
     <name lang="English" content="AUV_GSN"/>
@@ -465,7 +491,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Solution">
+    <argumentationElement xsi:type="gsn_:Solution" citedElement="//@artifactPackage.0/@artifactElement.5">
       <name lang="English" content="Sn2"/>
       <description>
         <content>

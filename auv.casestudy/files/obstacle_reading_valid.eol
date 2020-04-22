@@ -1,0 +1,7 @@
+var reading = M!ObstacleReading.all().first();
+return (reading.ns_rel_dist >= -50.0 and reading.ns_rel_dist <= 50.0)
+	and  (reading.ew_rel_dist >= -50.0 and reading.ew_rel_dist <= 50.0)
+	and  (reading.obs_depth >= -10.0 and reading.obs_depth <= 0.0)
+	and  (reading.obs_ns_vel >= -5.0 and reading.obs_ns_vel <= 5.0)
+	and  (reading.obs_ew_vel >= -5.0 and reading.obs_ew_vel <= 5.0)
+	and  (reading.obs_roc >= -5.0 and reading.obs_roc <= 5.0);

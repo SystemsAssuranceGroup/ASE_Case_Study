@@ -321,6 +321,12 @@
       <element xmi:type="artifact_:Artifact" href="auv.assurancecase#//@artifactPackage.0/@artifactElement.4"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FydpUYMHEeqV6b_LxZUZZg" x="128" y="570"/>
     </children>
+    <children xmi:type="notation:Shape" xmi:id="_-b19kIRlEeqQq--QZieuNg" type="2107" fontName="Microsoft YaHei UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="_-b2koIRlEeqQq--QZieuNg" type="5013"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_-b2koYRlEeqQq--QZieuNg" type="5026"/>
+      <element xmi:type="artifact_:Artifact" href="auv.assurancecase#//@artifactPackage.0/@artifactElement.5"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-b19kYRlEeqQq--QZieuNg" x="300" y="575"/>
+    </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_9exBsX4MEeqtx5fdDCWnVQ"/>
     <element xmi:type="artifact_:ArtifactPackage" href="auv.assurancecase#//@artifactPackage.0"/>
   </notation:Diagram>
