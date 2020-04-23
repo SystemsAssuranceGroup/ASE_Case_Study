@@ -210,13 +210,13 @@
       <children xmi:type="notation:DecorationNode" xmi:id="_DA_ucIBuEeqx4d6kh940-A" type="5005"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_DA_ucYBuEeqx4d6kh940-A" type="5006"/>
       <element xmi:type="gsn_:Goal" href="auv.assurancecase#//@argumentPackage.0/@argumentationElement.13"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DA_HYYBuEeqx4d6kh940-A" x="785" y="640" width="205" height="127"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_DA_HYYBuEeqx4d6kh940-A" x="775" y="640" width="205" height="127"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_IVLk4IBuEeqx4d6kh940-A" type="2305" fontName="Microsoft YaHei UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_IVML8IBuEeqx4d6kh940-A" type="5009"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_IVML8YBuEeqx4d6kh940-A" type="5010"/>
       <element xmi:type="gsn_:Solution" href="auv.assurancecase#//@argumentPackage.0/@argumentationElement.15"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IVLk4YBuEeqx4d6kh940-A" x="815" y="815" width="151" height="151"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_IVLk4YBuEeqx4d6kh940-A" x="800" y="810" width="151" height="151"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_WP8EAX4HEeqtx5fdDCWnVQ"/>
     <element xmi:type="gsn_:Module" href="auv.assurancecase#//@argumentPackage.0"/>
@@ -347,25 +347,25 @@
       <children xmi:type="notation:DecorationNode" xmi:id="_QcE6soK3Eeq5G-UQ-IczrQ" type="5005"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_QcE6s4K3Eeq5G-UQ-IczrQ" type="5006"/>
       <element xmi:type="gsn_:Goal" href="auv.assurancecase#//@argumentPackage.1/@argumentationElement.2"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QcE6sYK3Eeq5G-UQ-IczrQ" x="365" y="420"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_QcE6sYK3Eeq5G-UQ-IczrQ" x="365" y="420" width="211" height="131"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_TgUHwIK3Eeq5G-UQ-IczrQ" type="2303" fontName="Microsoft YaHei UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_TgUu0YK3Eeq5G-UQ-IczrQ" type="5005"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_TgUu0oK3Eeq5G-UQ-IczrQ" type="5006"/>
       <element xmi:type="gsn_:Goal" href="auv.assurancecase#//@argumentPackage.1/@argumentationElement.3"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TgUu0IK3Eeq5G-UQ-IczrQ" x="660" y="420"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_TgUu0IK3Eeq5G-UQ-IczrQ" x="660" y="420" width="211" height="131"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_WenE4IK3Eeq5G-UQ-IczrQ" type="2305" fontName="Microsoft YaHei UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_WenE4oK3Eeq5G-UQ-IczrQ" type="5009"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_WenE44K3Eeq5G-UQ-IczrQ" type="5010"/>
       <element xmi:type="gsn_:Solution" href="auv.assurancecase#//@argumentPackage.1/@argumentationElement.4"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WenE4YK3Eeq5G-UQ-IczrQ" x="390" y="610" width="94" height="97"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WenE4YK3Eeq5G-UQ-IczrQ" x="395" y="605" width="150" height="150"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_ZXDRoIK3Eeq5G-UQ-IczrQ" type="2305" fontName="Microsoft YaHei UI">
       <children xmi:type="notation:DecorationNode" xmi:id="_ZXDRooK3Eeq5G-UQ-IczrQ" type="5009"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_ZXDRo4K3Eeq5G-UQ-IczrQ" type="5010"/>
       <element xmi:type="gsn_:Solution" href="auv.assurancecase#//@argumentPackage.1/@argumentationElement.5"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZXDRoYK3Eeq5G-UQ-IczrQ" x="685" y="610" width="51" height="51"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_ZXDRoYK3Eeq5G-UQ-IczrQ" x="690" y="600" width="150" height="150"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_HDDV0YK3Eeq5G-UQ-IczrQ"/>
     <element xmi:type="gsn_:Module" href="auv.assurancecase#//@argumentPackage.1"/>

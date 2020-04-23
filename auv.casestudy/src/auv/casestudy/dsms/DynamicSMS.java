@@ -1,6 +1,5 @@
 package auv.casestudy.dsms;
 
-import java.io.File;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -97,7 +96,6 @@ public class DynamicSMS {
 	}
 	
 	public String getFileName(String abs) {
-		File f = new File(abs);
 		String fragments[] = abs.split("\\\\");
 		String filename = fragments[fragments.length-1];
 		return filename;
