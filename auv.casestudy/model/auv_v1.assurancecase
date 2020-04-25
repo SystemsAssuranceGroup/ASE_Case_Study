@@ -196,7 +196,20 @@
       <name lang="English" content="C1"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="The AUV system achieves mission safely"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="The system is acceptably safe"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
+    <argumentationElement xsi:type="gsn_:Goal">
+      <name lang="English" content="C2"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="All identified hazards have been mitigated"/>
         </content>
       </description>
       <implementationConstraint>
@@ -206,10 +219,10 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Context" citedElement="//@artifactPackage.0/@artifactElement.2">
-      <name lang="English" content="operation area"/>
+      <name lang="English" content="Hazard_Log"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="The AUV opearte in an known area"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="The Hazard Log"/>
         </content>
       </description>
       <implementationConstraint>
@@ -218,7 +231,20 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:InContextOf" source="//@argumentPackage.0/@argumentationElement.0" target="//@argumentPackage.0/@argumentationElement.1">
+    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.0" target="//@argumentPackage.0/@argumentationElement.1">
+      <name lang="English" content="Name"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
+    <argumentationElement xsi:type="gsn_:InContextOf" source="//@argumentPackage.0/@argumentationElement.1" target="//@argumentPackage.0/@argumentationElement.2">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -244,7 +270,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.0" target="//@argumentPackage.0/@argumentationElement.3">
+    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.1" target="//@argumentPackage.0/@argumentationElement.5">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -258,10 +284,10 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Goal">
-      <name lang="English" content="C2.a No collision to the obstacle"/>
+      <name lang="English" content="C3"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="The AUV arrives the destination without collision to the obstacle (H1)"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Hazard H1 is sufficiently mitigated"/>
         </content>
       </description>
       <implementationConstraint>
@@ -271,10 +297,10 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Goal" undeveloped="true">
-      <name lang="English" content="G2.b"/>
+      <name lang="English" content="G4"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="The AUV does not enter into OPEZ zone (H2)"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Hazard H2 is sufficiently mitigated"/>
         </content>
       </description>
       <implementationConstraint>
@@ -283,7 +309,20 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.3" target="//@argumentPackage.0/@argumentationElement.6">
+    <argumentationElement xsi:type="gsn_:Solution">
+      <name lang="English" content="FV1"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Formal Verification"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
+    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.5" target="//@argumentPackage.0/@argumentationElement.8">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -296,7 +335,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.3" target="//@argumentPackage.0/@argumentationElement.5">
+    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.5" target="//@argumentPackage.0/@argumentationElement.7">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -309,46 +348,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Assumption">
-      <name lang="English" content="Hazard log"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="All hazards are identified&#xD;&#xA;"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:InContextOf" source="//@argumentPackage.0/@argumentationElement.3" target="//@argumentPackage.0/@argumentationElement.9">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Strategy">
-      <name lang="English" content="S2"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Argument over all kinds of obstacle"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.5" target="//@argumentPackage.0/@argumentationElement.11">
+    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.7" target="//@argumentPackage.0/@argumentationElement.9">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -362,10 +362,10 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Goal">
-      <name lang="English" content="C3.a"/>
+      <name lang="English" content="G5"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="No collision will occur to the static obstacle "/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Requirement R1 is met"/>
         </content>
       </description>
       <implementationConstraint>
@@ -374,33 +374,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Goal" undeveloped="true">
-      <name lang="English" content="C3.b"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="No collision will occur to the dynamic obstacle"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Strategy">
-      <name lang="English" content="S3.a "/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Implementation satisfies  C3.a"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.11" target="//@argumentPackage.0/@argumentationElement.13">
+    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.5" target="//@argumentPackage.0/@argumentationElement.13">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -413,24 +387,11 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.11" target="//@argumentPackage.0/@argumentationElement.14">
-      <name lang="English" content="Name"/>
+    <argumentationElement xsi:type="gsn_:Solution" citedElement="//@artifactPackage.0/@artifactElement.0">
+      <name lang="English" content="Sn2"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Goal">
-      <name lang="English" content="C4.a"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="The velocity will be reduced if then velocity is high and the distance to the static obstacle is short  "/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Model validation with Architecture model"/>
         </content>
       </description>
       <implementationConstraint>
@@ -440,409 +401,6 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.13" target="//@argumentPackage.0/@argumentationElement.15">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.15" target="//@argumentPackage.0/@argumentationElement.18">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Strategy">
-      <name lang="English" content="S4.a "/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="All relative &#xD;&#xA;componenets &#xD;&#xA;satisfies C4.a"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.18" target="//@argumentPackage.0/@argumentationElement.21">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Goal">
-      <name lang="English" content="G5.a"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content=" LRE satisfies C4.a"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.21" target="//@argumentPackage.0/@argumentationElement.23">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Goal" undeveloped="true">
-      <name lang="English" content="C5.b"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Autopilot satisfies C4.a"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Goal" undeveloped="true">
-      <name lang="English" content="C5.c"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Sensors satisfies C4.a"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Goal" undeveloped="true">
-      <name lang="English" content="C5.d"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Actuators satisfies C4.a"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.21" target="//@argumentPackage.0/@argumentationElement.25">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.21" target="//@argumentPackage.0/@argumentationElement.26">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.21" target="//@argumentPackage.0/@argumentationElement.27">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Context">
-      <name lang="English" content=""/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="The AUV sensor data is accurate within the range"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:InContextOf" source="//@argumentPackage.0/@argumentationElement.23" target="//@argumentPackage.0/@argumentationElement.31">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Goal">
-      <name lang="English" content="C6.a "/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE active the right control &#xD;&#xA;mode if there are potential &#xD;&#xA;collision risks (R6)"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Goal">
-      <name lang="English" content="C6.b "/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE accept no navigation input &#xA;from the operator (R2)"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Goal">
-      <name lang="English" content="C6.c "/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE send command to reduce the speed(R7)"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Goal">
-      <name lang="English" content="C6.d "/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE is deadlock free(R10)"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.23" target="//@argumentPackage.0/@argumentationElement.33">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.23" target="//@argumentPackage.0/@argumentationElement.34">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.23" target="//@argumentPackage.0/@argumentationElement.35">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.23" target="//@argumentPackage.0/@argumentationElement.36">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Solution">
-      <name lang="English" content="Solution 1 "/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="FM verification&#xD;&#xA;G6.a Mode=HCM if &#xD;&#xA;hvel ≥0.1∧ hdist(cstc) ≤ StaticObsHorizDist&#xD;&#xA;\/&#xD;&#xA;vvel ≥0.1∧ vdist(cstc) ≤ StaticObsVertDist&#xD;&#xA;\/&#xD;&#xA;vdist(cstc)   ≤ &#xD;&#xA;StaticObsDfltVertDist"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content="Mode=HCM if &#xD;&#xA;hvel ≥0.1∧ hdist(cstc) ≤ StaticObsHorizDist&#xD;&#xA;\/&#xD;&#xA;vvel ≥0.1∧ vdist(cstc) ≤ StaticObsVertDist&#xD;&#xA;\/&#xD;&#xA;vdist(cstc)   ≤ &#xD;&#xA;StaticObsDfltVertDist"/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Solution">
-      <name lang="English" content="Solution 2 "/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content=" simulation"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Solution">
-      <name lang="English" content="Solution 3"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content=" lab testing"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Solution">
-      <name lang="English" content="Solution 4  "/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="EVL validation&#xD;&#xA;advVel≤0.1 when mode=HC"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content="advVel≤0.1 when mode=HCM"/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Solution">
-      <name lang="English" content="Solution 5 "/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Formal verification&#xD;&#xA;Theorem LRE_deadlock_free"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content="Theorem LRE_deadlock_free:&#xD;&#xA;"/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.33" target="//@argumentPackage.0/@argumentationElement.41">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.34" target="//@argumentPackage.0/@argumentationElement.42">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.34" target="//@argumentPackage.0/@argumentationElement.43">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.35" target="//@argumentPackage.0/@argumentationElement.44">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.0/@argumentationElement.36" target="//@argumentPackage.0/@argumentationElement.45">
       <name lang="English" content="Name"/>
       <description>
         <content>
