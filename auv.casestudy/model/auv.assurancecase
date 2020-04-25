@@ -179,6 +179,32 @@
         </implementationConstraint>
       </artifactProperty>
     </artifactElement>
+    <artifactElement xsi:type="artifact_:Artifact">
+      <name lang="English" content="LRE"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE runtime"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content="var lre = LRE.all().first();&#xD;&#xA;return lre.opMode = OperationMode#HCM and lre.advVel.value &lt;= 0.1;"/>
+        </content>
+      </implementationConstraint>
+      <artifactProperty>
+        <name lang="English" content="URI"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\ASE_Case_Study\auv.casestudy\model\lre.lre"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </artifactProperty>
+    </artifactElement>
   </artifactPackage>
   <argumentPackage xsi:type="gsn_:Module">
     <name lang="English" content="AUV_GSN"/>
@@ -764,16 +790,16 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Solution">
+    <argumentationElement xsi:type="gsn_:Solution" citedElement="//@artifactPackage.0/@artifactElement.6">
       <name lang="English" content="Solution 4  "/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="EVL validation&#xD;&#xA;advVel≤0.1 when mode=HC"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="EVL validation&#xD;&#xA;advVel≤0.1 when mode=HCM"/>
         </content>
       </description>
       <implementationConstraint>
         <content>
-          <value lang="English" content="advVel≤0.1 when mode=HCM"/>
+          <value lang="English" content=""/>
         </content>
       </implementationConstraint>
     </argumentationElement>

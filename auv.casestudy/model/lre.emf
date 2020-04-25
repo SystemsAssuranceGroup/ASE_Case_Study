@@ -1,0 +1,77 @@
+@namespace(uri="http://auv.lre/1.0", prefix="auv_lre")
+package auv_lre;
+
+
+enum OperationMode {
+	OCM;
+	MOM;
+	HCM;
+	CAM;
+}
+
+class NamedElement {
+	attr String name;
+	attr String gid;
+	attr String timeStamp;
+} 
+
+abstract class AbstractDataElement extends NamedElement {
+}
+
+abstract class AbstractRequestActionElement extends NamedElement {
+}
+
+abstract class AbstractAdviseActionElement extends NamedElement {
+	attr float value;
+}
+
+class ReqVel extends AbstractRequestActionElement {
+	
+}
+
+class ReqHeading extends AbstractRequestActionElement {
+	
+}
+
+class AdvVel extends AbstractAdviseActionElement {
+	
+}
+
+class AdvHeading extends AbstractAdviseActionElement {
+	
+}
+
+class SensorReading extends AbstractDataElement {
+	attr float depth;
+	attr float ns_vel;
+	attr float ew_vel;
+	attr float rate_of_climb;
+	attr float heading;
+}
+
+class ObstacleReading extends AbstractDataElement {
+	attr boolean static;
+	attr float ns_rel_dist;
+	attr float ew_rel_dist;
+	attr float obs_depth;
+	attr float obs_ns_vel;
+	attr float obs_ew_vel;
+	attr float obs_roc;
+}
+
+class Obstacle extends NamedElement {
+	val ObstacleReading[1] readings;
+}
+
+class LRE extends NamedElement {
+	attr OperationMode[1] opMode;
+	attr boolean inOPEZ;
+	val SensorReading[1] sensorReading;
+	val Obstacle[*] staticObstacles;
+	val Obstacle[*] dynamicObstacles;
+	val ReqVel reqVel;
+	val ReqHeading reqHdng;
+	val AdvVel advVel;
+	val AdvHeading advHdng;
+}
+

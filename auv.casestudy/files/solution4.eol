@@ -1,0 +1,2 @@
+var lre = LRE.all().first();
+return lre.opMode = OperationMode#HCM and lre.advVel.value <= 0.1;

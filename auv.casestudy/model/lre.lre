@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<auv_lre:LRE xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:auv_lre="http://auv.lre/1.0" opMode="HCM">
+  <advVel value="0.05"/>
+</auv_lre:LRE>
