@@ -35,7 +35,7 @@ public class DynamicSMS {
 
 
 	public static void main(String[] args) {
-		DynamicSMS dsms = new DynamicSMS("model/auv.assurancecase", "model/");
+		DynamicSMS dsms = new DynamicSMS("model/auv_v1.assurancecase", "model/");
 		dsms.setCycles(1000);
 		dsms.setTime_interval(200);
 		try {
