@@ -257,6 +257,32 @@
         </implementationConstraint>
       </artifactProperty>
     </artifactElement>
+    <artifactElement xsi:type="artifact_:Artifact">
+      <name lang="English" content="HCM Caution Transitions"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content="var mom = State.all().select(s|s.name = &quot;MOM&quot;).first();&#xA;var transitions = Transition.all().select(t|t.source = mom);&#xA;return (transitions.size() >= 3 and transitions.exists(t|t.name = &quot;t4&quot;) and transitions.exists(t|t.name = &quot;t5&quot;) and transitions.exists(t|t.name = &quot;t9&quot;));"/>
+        </content>
+      </implementationConstraint>
+      <artifactProperty>
+        <name lang="English" content="URI"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="/home/userfs/f/fy668/git/ASE_Case_Study/auv.casestudy/model/auv.robochart"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </artifactProperty>
+    </artifactElement>
   </artifactPackage>
   <argumentPackage xsi:type="gsn_:Module">
     <name lang="English" content="AUV_GSN_systemlevel"/>
@@ -1297,6 +1323,58 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
+    <argumentationElement xsi:type="gsn_:Solution" citedElement="//@artifactPackage.0/@artifactElement.9">
+      <name lang="English" content="Solution 1-0"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Implementing Transitions"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
+    <argumentationElement xsi:type="gsn_:Context">
+      <name lang="English" content="Name"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
+    <argumentationElement xsi:type="gsn_:AwayGoal" citedElement="//@argumentPackage.7/@argumentationElement.0">
+      <name lang="English" content="Sensors"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Sensor readings are within the specified range."/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
+    <argumentationElement xsi:type="gsn_:InContextOf" source="//@argumentPackage.2/@argumentationElement.0" target="//@argumentPackage.2/@argumentationElement.19">
+      <name lang="English" content="Name"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
   </argumentPackage>
   <argumentPackage xsi:type="gsn_:Module">
     <name lang="English" content="AUV_Overall"/>
@@ -1973,6 +2051,45 @@
         <value lang="English" content=""/>
       </content>
     </implementationConstraint>
+    <argumentationElement xsi:type="gsn_:Goal" isPublic="true">
+      <name lang="English" content="Sensors"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Sensor readings are within the specified range."/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
+    <argumentationElement xsi:type="gsn_:Solution" citedElement="//@artifactPackage.0/@artifactElement.5">
+      <name lang="English" content="Digital Twin"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
+    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.7/@argumentationElement.0" target="//@argumentPackage.7/@argumentationElement.1">
+      <name lang="English" content="Name"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
   </argumentPackage>
   <argumentPackage xsi:type="gsn_:Module">
     <name lang="English" content="3 Actuator_Argument"/>

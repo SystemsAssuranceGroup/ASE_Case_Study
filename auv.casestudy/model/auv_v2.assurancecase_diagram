@@ -549,6 +549,12 @@
       <element xmi:type="artifact_:Artifact" href="auv.assurancecase#//@artifactPackage.0/@artifactElement.8"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_rBE54Yk6EeqeIvgAjPhYZw" x="1160" y="615"/>
     </children>
+    <children xmi:type="notation:Shape" xmi:id="_GY5QUIuQEeq_eoYgj0pgBA" type="2107" fontName="Ubuntu">
+      <children xmi:type="notation:DecorationNode" xmi:id="_GY53YIuQEeq_eoYgj0pgBA" type="5013"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="_GY6ecIuQEeq_eoYgj0pgBA" type="5026"/>
+      <element xmi:type="artifact_:Artifact" href="auv.assurancecase#//@artifactPackage.0/@artifactElement.9"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_GY5QUYuQEeq_eoYgj0pgBA" x="690" y="30"/>
+    </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_9exBsX4MEeqtx5fdDCWnVQ"/>
     <element xmi:type="artifact_:ArtifactPackage" href="auv.assurancecase#//@artifactPackage.0"/>
   </notation:Diagram>
