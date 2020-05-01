@@ -1119,7 +1119,7 @@
       <name lang="English" content="C7.a"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE activates the right control &#xA;mode if there are potential &#xA;collision risks (R6)"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE activates the right control &#xA;mode if there are potential &#xA;collision risks "/>
         </content>
       </description>
       <implementationConstraint>
@@ -1132,7 +1132,7 @@
       <name lang="English" content="C7.d"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE accept no navigation input &#xA;from the operator (R2)"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE accept no navigation input &#xA;from the operator."/>
         </content>
       </description>
       <implementationConstraint>
@@ -1145,7 +1145,7 @@
       <name lang="English" content="C7.b"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE send command to reduce the speed no larger than 0.1m/s(R7)"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE send command to reduce the speed no larger than 0.1m/s"/>
         </content>
       </description>
       <implementationConstraint>
@@ -1158,7 +1158,7 @@
       <name lang="English" content="C7.c"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE is deadlock free(R10)"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE is deadlock free."/>
         </content>
       </description>
       <implementationConstraint>
