@@ -909,7 +909,7 @@
     </argumentationElement>
   </argumentPackage>
   <argumentPackage xsi:type="gsn_:Module">
-    <name lang="English" content="Sensor_Argument"/>
+    <name lang="English" content="Sensor_Argument_old"/>
     <description>
       <content>
         <value xsi:type="base_:ExpressionLangString" lang="English" content="Safety argument for AUV data"/>
@@ -1106,7 +1106,7 @@
       <name lang="English" content="C6.a"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Whenever the LRE senses a close static obstacle, it advises the autopilot to switch to HCM and reduces the velocity to 0.1m/s."/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Whenever the LRE senses a close &#xD;&#xA;static obstacle, it advises the &#xD;&#xA;autopilot to switch to HCM and &#xD;&#xA;reduces the velocity to 0.1m/s."/>
         </content>
       </description>
       <implementationConstraint>
@@ -1119,7 +1119,7 @@
       <name lang="English" content="C7.a"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE model activates HCM mode if there are potential collision risks."/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE model activates HCM &#xD;&#xA;mode if there are potential &#xD;&#xA;collision risks."/>
         </content>
       </description>
       <implementationConstraint>
@@ -1168,10 +1168,10 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Solution" citedElement="//@artifactPackage.0/@artifactElement.6">
-      <name lang="English" content="Solution 2"/>
+      <name lang="English" content="Sn2"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Entry action of HCM state in RoboChart model"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Entry action of HCM state in RoboChart &#xD;&#xA;model"/>
         </content>
       </description>
       <implementationConstraint>
@@ -1194,10 +1194,10 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Solution">
-      <name lang="English" content="Solution 3"/>
+      <name lang="English" content="Sn3"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Formal verification&#xA;"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Formal &#xD;&#xA;verification&#xD;&#xA;"/>
         </content>
       </description>
       <implementationConstraint>
@@ -1220,10 +1220,10 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Solution" citedElement="//@artifactPackage.0/@artifactElement.9">
-      <name lang="English" content="Solution 1-0"/>
+      <name lang="English" content="Sn1"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Implementing transitions in RoboChart model"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Implementing transitions in RoboChart &#xD;&#xA;model"/>
         </content>
       </description>
       <implementationConstraint>
@@ -1233,10 +1233,10 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Context">
-      <name lang="English" content="LRE Statemachine"/>
+      <name lang="English" content="LRE.C1"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="RoboChart statemachine model formalising LRE behaviour"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="RoboChart statemachine &#xD;&#xA;model formalising LRE behaviour"/>
         </content>
       </description>
       <implementationConstraint>
@@ -1246,7 +1246,7 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:AwayGoal" citedElement="//@argumentPackage.7/@argumentationElement.0">
-      <name lang="English" content="Sensors"/>
+      <name lang="English" content="LRE.AG1"/>
       <description>
         <content>
           <value xsi:type="base_:ExpressionLangString" lang="English" content="Sensor readings are within the specified range and accurate."/>
@@ -1272,7 +1272,7 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:AwayGoal" citedElement="//@argumentPackage.9/@argumentationElement.0">
-      <name lang="English" content="Autopilot"/>
+      <name lang="English" content="LRE.AG2"/>
       <description>
         <content>
           <value xsi:type="base_:ExpressionLangString" lang="English" content="The autopilot responds to commands in a timely manner."/>
@@ -1298,7 +1298,7 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Strategy">
-      <name lang="English" content="S1"/>
+      <name lang="English" content="LRE.S1"/>
       <description>
         <content>
           <value xsi:type="base_:ExpressionLangString" lang="English" content="Argument by formalisation and decomposition."/>
@@ -1389,7 +1389,7 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Goal" undeveloped="true">
-      <name lang="English" content="Validation"/>
+      <name lang="English" content="LRE.G1"/>
       <description>
         <content>
           <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE software is validated against the formal model."/>
@@ -1415,7 +1415,7 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Assumption">
-      <name lang="English" content="Autonomous"/>
+      <name lang="English" content="LRE.A1"/>
       <description>
         <content>
           <value xsi:type="base_:ExpressionLangString" lang="English" content="The LRE is not under operator control."/>
@@ -1431,7 +1431,7 @@
       <name lang="English" content="Appropriateness"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="The RoboChart language is an appropriate formal method for modelling the LRE."/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="The RoboChart language is &#xD;&#xA;an appropriate formal method &#xD;&#xA;for modelling the LRE."/>
         </content>
       </description>
       <implementationConstraint>
@@ -1481,7 +1481,7 @@
     </argumentationElement>
   </argumentPackage>
   <argumentPackage xsi:type="gsn_:Module">
-    <name lang="English" content="AUV_Overall"/>
+    <name lang="English" content="AUV_Overall_old"/>
     <description>
       <content>
         <value xsi:type="base_:ExpressionLangString" lang="English" content="Overall safety argument for AUV"/>
@@ -1663,7 +1663,7 @@
     </argumentationElement>
   </argumentPackage>
   <argumentPackage xsi:type="gsn_:Module">
-    <name lang="English" content="LRE_Argument"/>
+    <name lang="English" content="LRE_Argument_old"/>
     <description>
       <content>
         <value xsi:type="base_:ExpressionLangString" lang="English" content="Safety argument for AUV's LRE"/>
@@ -2105,7 +2105,7 @@
     </argumentationElement>
   </argumentPackage>
   <argumentPackage xsi:type="gsn_:Module">
-    <name lang="English" content="Autopilot_Argument"/>
+    <name lang="English" content="Autopilot_Argument_old"/>
     <description>
       <content>
         <value xsi:type="base_:ExpressionLangString" lang="English" content="Safety argument for AUV's Autopilot"/>
@@ -2131,7 +2131,7 @@
     </argumentationElement>
   </argumentPackage>
   <argumentPackage xsi:type="gsn_:Module">
-    <name lang="English" content="Actuator_Argument"/>
+    <name lang="English" content="Actuator_Argument_old"/>
     <description>
       <content>
         <value xsi:type="base_:ExpressionLangString" lang="English" content="Safety arguemnt for AUV's actuator"/>
@@ -2523,7 +2523,7 @@
       <name lang="English" content="LRE Argument"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Safety case for LRE"/>
         </content>
       </description>
       <implementationConstraint>
@@ -2536,7 +2536,7 @@
       <name lang="English" content="AUV System"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="System level safety argument for AUV"/>
         </content>
       </description>
       <implementationConstraint>
@@ -2562,7 +2562,7 @@
       <name lang="English" content="Autopilot Argument"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Safety case for AUV Autopilot"/>
         </content>
       </description>
       <implementationConstraint>
@@ -2575,7 +2575,7 @@
       <name lang="English" content="Platform Argument"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Safety case for AUV platform"/>
         </content>
       </description>
       <implementationConstraint>
@@ -2588,7 +2588,7 @@
       <name lang="English" content="Operator Argument"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Safety case for operators"/>
         </content>
       </description>
       <implementationConstraint>
