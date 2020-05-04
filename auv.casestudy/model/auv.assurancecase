@@ -257,23 +257,23 @@
         </implementationConstraint>
       </artifactProperty>
     </artifactElement>
-    <artifactElement xsi:type="artifact_:Artifact">
-      <name lang="English" content="HCM Caution Transitions"/>
+    <artifactElement xsi:type="artifact_:Artifact" date="2020-05-01T14:12:24.000+0800">
+      <name lang="English" content="LRE_HCM_R1"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="HCM Caution &#xD;&#xA;Transitions"/>
         </content>
       </description>
       <implementationConstraint>
         <content>
-          <value lang="English" content="var mom = State.all().select(s|s.name = &quot;MOM&quot;).first();&#xA;var transitions = Transition.all().select(t|t.source = mom);&#xA;return (transitions.size() >= 3 and transitions.exists(t|t.name = &quot;t4&quot;) and transitions.exists(t|t.name = &quot;t5&quot;) and transitions.exists(t|t.name = &quot;t9&quot;));"/>
+          <value lang="English" content="var mom = State.all().select(s|s.name = &quot;MOM&quot;).first();&#xD;&#xA;var transitions = Transition.all().select(t|t.source = mom);&#xD;&#xA;var names = transitions.name;&#xD;&#xA;return (transitions.size() >= 3 and names.includes(&quot;t4&quot;) and names.includes(&quot;t5&quot;) and names.includes(&quot;t9&quot;));"/>
         </content>
       </implementationConstraint>
       <artifactProperty>
         <name lang="English" content="URI"/>
         <description>
           <content>
-            <value xsi:type="base_:ExpressionLangString" lang="English" content="/home/userfs/f/fy668/git/ASE_Case_Study/auv.casestudy/model/auv.robochart"/>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\ASE_Case_Study\auv.casestudy\model\auv.robochart"/>
           </content>
         </description>
         <implementationConstraint>
@@ -1106,7 +1106,7 @@
       <name lang="English" content="C6.a"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Whenever the LRE senses a close &#xD;&#xA;static obstacle, it advises the &#xD;&#xA;autopilot to switch to HCM and &#xD;&#xA;reduces the velocity to 0.1m/s."/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Whenever the LRE senses a &#xD;&#xA;close static obstacle, it advises the &#xD;&#xA;autopilot to switch to HCM and &#xD;&#xA;reduces the velocity to 0.1m/s."/>
         </content>
       </description>
       <implementationConstraint>
@@ -1119,7 +1119,7 @@
       <name lang="English" content="C7.a"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE model activates HCM &#xD;&#xA;mode if there are potential &#xD;&#xA;collision risks."/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE activates HCM mode &#xD;&#xA;if there are potential collision &#xD;&#xA;risks."/>
         </content>
       </description>
       <implementationConstraint>
@@ -1246,7 +1246,7 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:AwayGoal" citedElement="//@argumentPackage.7/@argumentationElement.0">
-      <name lang="English" content="LRE.AG1"/>
+      <name lang="English" content="Sensors"/>
       <description>
         <content>
           <value xsi:type="base_:ExpressionLangString" lang="English" content="Sensor readings are within the specified range and accurate."/>
@@ -1272,7 +1272,7 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:AwayGoal" citedElement="//@argumentPackage.9/@argumentationElement.0">
-      <name lang="English" content="LRE.AG2"/>
+      <name lang="English" content="Autopilot"/>
       <description>
         <content>
           <value xsi:type="base_:ExpressionLangString" lang="English" content="The autopilot responds to commands in a timely manner."/>
@@ -1389,7 +1389,7 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Goal" undeveloped="true">
-      <name lang="English" content="LRE.G1"/>
+      <name lang="English" content="LRE.Validation"/>
       <description>
         <content>
           <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE software is validated against the formal model."/>
@@ -1428,7 +1428,7 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Goal" undeveloped="true">
-      <name lang="English" content="Appropriateness"/>
+      <name lang="English" content="LRE.Appropriateness"/>
       <description>
         <content>
           <value xsi:type="base_:ExpressionLangString" lang="English" content="The RoboChart language is &#xD;&#xA;an appropriate formal method &#xD;&#xA;for modelling the LRE."/>
@@ -2172,7 +2172,7 @@
       <name lang="English" content="Digital Twin"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Runtime Evaluation"/>
         </content>
       </description>
       <implementationConstraint>
@@ -2185,7 +2185,7 @@
       <name lang="English" content="Sensor.S1"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Argument over different sensor data"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Argument over different &#xD;&#xA;sensor data"/>
         </content>
       </description>
       <implementationConstraint>
@@ -2263,7 +2263,7 @@
       <name lang="English" content="Sensor.G3.a"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Obstacle data is within range."/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Obstacle data is well-formed"/>
         </content>
       </description>
       <implementationConstraint>
@@ -2325,10 +2325,10 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Solution">
-      <name lang="English" content="Sensor.solution 2"/>
+      <name lang="English" content="Sensor.Sn2"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="System design review"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="System &#xD;&#xA;design review"/>
         </content>
       </description>
       <implementationConstraint>
@@ -2403,7 +2403,7 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Solution">
-      <name lang="English" content="Sensor.Solution 3"/>
+      <name lang="English" content="Sensor.Sn3"/>
       <description>
         <content>
           <value xsi:type="base_:ExpressionLangString" lang="English" content="EVL"/>
@@ -2429,10 +2429,10 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Solution">
-      <name lang="English" content="Sensor.Solution 4"/>
+      <name lang="English" content="Sensor.Sn4"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="System design review"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="System &#xD;&#xA;design review"/>
         </content>
       </description>
       <implementationConstraint>
