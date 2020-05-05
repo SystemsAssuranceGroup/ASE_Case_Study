@@ -73,7 +73,9 @@ for(strategy in strategies) {
 	var targets = incomings.source.flatten();
 	var sources = outgoings.target.flatten();
 	var source_names = "@{Claim" + getName(sources.first()) + "}";
-	for(i in Sequence{1..sources.size()-1}) {
+	for(i in Sequence{0..sources.size()-1}) {
+		i.println();
+		sources.size().println();
 		source_names = source_names + ", " + "@{Claim" + getName(sources.at(i)) + "}";
 	}
 	%]

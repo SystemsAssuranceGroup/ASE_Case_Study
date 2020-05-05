@@ -283,6 +283,32 @@
         </implementationConstraint>
       </artifactProperty>
     </artifactElement>
+    <artifactElement xsi:type="artifact_:Artifact">
+      <name lang="English" content="Deadlock_Free"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+      <artifactProperty>
+        <name lang="English" content="URI"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="URI for external reference"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+      </artifactProperty>
+    </artifactElement>
   </artifactPackage>
   <argumentPackage xsi:type="gsn_:Module">
     <name lang="English" content="AUV System"/>
@@ -1145,7 +1171,7 @@
       <name lang="English" content="C7.b"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE sends command to reduce the speed to at most 0.1m/s"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE sends command to reduce the speed to 0.1m/s"/>
         </content>
       </description>
       <implementationConstraint>
@@ -1193,7 +1219,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Solution">
+    <argumentationElement xsi:type="gsn_:Solution" citedElement="//@artifactPackage.0/@artifactElement.10">
       <name lang="English" content="Sn3"/>
       <description>
         <content>
