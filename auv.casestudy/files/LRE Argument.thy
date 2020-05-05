@@ -1,29 +1,18 @@
 theory LRE Argument
 	imports "Isabelle_SACM.Isa_SACM" 	
 begin 
-	Claim LRE.C1 ‹ RoboChart statemachine 
-	               model formalising LRE behaviour ›
+	Claim LRE.C1 ‹ RoboChart statemachine model formalising LRE behaviour ›
 	Claim LRE.A1 assumed ‹ The LRE is not under operator control. ›
-	Claim C6.a ‹ Whenever the LRE senses a 
-	             close static obstacle, it advises the 
-	             autopilot to switch to HCM and 
-	             reduces the velocity to 0.1m/s. ›
-	Claim C7.a ‹ LRE activates HCM mode 
-	             if there are potential collision 
-	             risks. ›
+	Claim C6.a ‹ Whenever the LRE senses a close static obstacle, it advises the autopilot to switch to HCM and  reduces the velocity to 0.1m/s. ›
+	Claim C7.a ‹ LRE activates HCM mode if there are potential collision risks. ›
 	Claim C7.d needsSupport ‹ LRE accept no navigation input from the operator ›
 	Claim C7.b ‹ LRE sends command to reduce the speed to 0.1m/s ›
 	Claim C7.c ‹ LRE is deadlock free ›
 	Claim LRE.Validation needsSupport ‹ LRE software is validated against the formal model. ›
-	Claim LRE.Appropriateness needsSupport ‹ The RoboChart language is 
-	                                         an appropriate formal method 
-	                                         for modelling the LRE. ›
-	ArtifactReference Sn2 ‹Entry action of HCM state in RoboChart 
-	                       model›
-	ArtifactReference Sn3 ‹Formal 
-	                       verification›
-	ArtifactReference Sn1 ‹Implementing transitions in RoboChart 
-	                       model›
+	Claim LRE.Appropriateness needsSupport ‹ The RoboChart language is  an appropriate formal method for modelling the LRE. ›
+	ArtifactReference Sn2 ‹Entry action of HCM state in RoboChart model›
+	ArtifactReference Sn3 ‹Formal verification›
+	ArtifactReference Sn1 ‹Implementing transitions in RoboChart model›
 	Inference Name src ‹{@{ClaimC7.a}, @{ClaimC7.b}, @{ClaimC7.c}, @{ClaimC7.d}, @{ClaimLRE.Validation}, @{ClaimLRE.Appropriateness}}› tgt ‹{@{Claim C6.a}}›
 		‹ @{Claim C6.a} is supported by @{ClaimC7.a}, @{ClaimC7.b}, @{ClaimC7.c}, @{ClaimC7.d}, @{ClaimLRE.Validation}, @{ClaimLRE.Appropriateness}.›
 	Inference Name src ‹{@{ArtifactReference Sn2}}› tgt ‹{@{Claim C7.b}}›
