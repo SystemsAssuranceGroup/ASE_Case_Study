@@ -15,16 +15,16 @@ begin
 	Claim C3.a ‹ SR1-AUV system does not cause collision with obstacles ›
 	Claim C3.b ‹ SR-2 operators does not cause collision with obstacles ›
 	Claim C5.b needsSupport ‹ SR1-1-2 Navigation shall avoid the path with high collision risk ›
-	Inference Name src ‹{@{ClaimC2.b}, @{ClaimC2.b}, @{ClaimC2.a}}› tgt ‹{@{Claim C1}}›
-		‹ @{Claim C1} is supported by @{ClaimC2.b}, @{ClaimC2.b}, @{ClaimC2.a}.›
-	Inference Name src ‹{@{ClaimC4.a}, @{ClaimC4.a}, @{ClaimC4.b}}› tgt ‹{@{Claim C3.a}}›
-		‹ @{Claim C3.a} is supported by @{ClaimC4.a}, @{ClaimC4.a}, @{ClaimC4.b}.›
-	Inference Name src ‹{@{ClaimAutopilot_Argument}, @{ClaimAutopilot_Argument}, @{ClaimSensor_Argument}, @{ClaimActuator_Argument}, @{ClaimC6.a}}› tgt ‹{@{Claim C5.a}}›
-		‹ @{Claim C5.a} is supported by @{ClaimAutopilot_Argument}, @{ClaimAutopilot_Argument}, @{ClaimSensor_Argument}, @{ClaimActuator_Argument}, @{ClaimC6.a}.›
-	Inference Name src ‹{@{ClaimC3.b}, @{ClaimC3.b}}› tgt ‹{@{Claim C2.b}}›
-		‹ @{Claim C2.b} is supported by @{ClaimC3.b}, @{ClaimC3.b}.›
-	Inference Name src ‹{@{ClaimC3.a}, @{ClaimC3.a}, @{ClaimC3.b}}› tgt ‹{@{Claim C2.a}}›
-		‹ @{Claim C2.a} is supported by @{ClaimC3.a}, @{ClaimC3.a}, @{ClaimC3.b}.›
+	Inference Name src ‹{@{ClaimC2.b}, @{ClaimC2.a}}› tgt ‹{@{Claim C1}}›
+		‹ @{Claim C1} is supported by @{ClaimC2.b}, @{ClaimC2.a}.›
+	Inference Name src ‹{@{ClaimC4.a}, @{ClaimC4.b}}› tgt ‹{@{Claim C3.a}}›
+		‹ @{Claim C3.a} is supported by @{ClaimC4.a}, @{ClaimC4.b}.›
+	Inference Name src ‹{@{ClaimAutopilot_Argument}, @{ClaimSensor_Argument}, @{ClaimActuator_Argument}, @{ClaimC6.a}}› tgt ‹{@{Claim C5.a}}›
+		‹ @{Claim C5.a} is supported by @{ClaimAutopilot_Argument}, @{ClaimSensor_Argument}, @{ClaimActuator_Argument}, @{ClaimC6.a}.›
+	Inference Name src ‹{@{ClaimC3.b}}› tgt ‹{@{Claim C2.b}}›
+		‹ @{Claim C2.b} is supported by @{ClaimC3.b}.›
+	Inference Name src ‹{@{ClaimC3.a}, @{ClaimC3.b}}› tgt ‹{@{Claim C2.a}}›
+		‹ @{Claim C2.a} is supported by @{ClaimC3.a}, @{ClaimC3.b}.›
 	Context Name src ‹{@{Claim Context1}}› tgt ‹{@{Claim C1}}›
 		‹ @{Claim C1} is context for @{Claim Context1}.›
 	Inference Name src ‹{@{Claim S1}}› tgt ‹{@{Claim C1}}›

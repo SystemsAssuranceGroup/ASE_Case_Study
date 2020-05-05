@@ -7,8 +7,8 @@ begin
 	ArtifactReference Sensor.Sn1 ‹Runtime model validation›
 	ArtifactReference Sensor.Sn2 ‹Runtime model validation›
 	ArtifactReference Sensor.Sn3 ‹Redundant sensors to improve accuracy›
-	Inference Name src ‹{@{ClaimSensor.G2}, @{ClaimSensor.G2}, @{ClaimSensor.G3}}› tgt ‹{@{Claim Sensor.G1}}›
-		‹ @{Claim Sensor.G1} is supported by @{ClaimSensor.G2}, @{ClaimSensor.G2}, @{ClaimSensor.G3}.›
+	Inference Name src ‹{@{ClaimSensor.G2}, @{ClaimSensor.G3}}› tgt ‹{@{Claim Sensor.G1}}›
+		‹ @{Claim Sensor.G1} is supported by @{ClaimSensor.G2}, @{ClaimSensor.G3}.›
 	Inference Name src ‹{@{Claim Sensor.S1}}› tgt ‹{@{Claim Sensor.G1}}›
 		‹ @{Claim Sensor.G1} is supported by @{Claim Sensor.S1}.›
 	Inference Name src ‹{@{Claim Sensor.G2}}› tgt ‹{@{Claim Sensor.S1}}›

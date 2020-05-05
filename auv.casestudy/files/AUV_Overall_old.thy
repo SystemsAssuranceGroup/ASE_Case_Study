@@ -3,8 +3,8 @@ theory AUV_Overall_old
 begin 
 	Claim C1 ‹ Defined AUV operation area ›
 	Claim G1 ‹ The AUV is acceptably safe to operate ›
-	Inference Name src ‹{@{ClaimLRE_Argument}, @{ClaimLRE_Argument}, @{ClaimSensor_Argument}, @{ClaimAutopiloe_Argument}, @{ClaimActuator_Argument}}› tgt ‹{@{Claim G1}}›
-		‹ @{Claim G1} is supported by @{ClaimLRE_Argument}, @{ClaimLRE_Argument}, @{ClaimSensor_Argument}, @{ClaimAutopiloe_Argument}, @{ClaimActuator_Argument}.›
+	Inference Name src ‹{@{ClaimLRE_Argument}, @{ClaimSensor_Argument}, @{ClaimAutopiloe_Argument}, @{ClaimActuator_Argument}}› tgt ‹{@{Claim G1}}›
+		‹ @{Claim G1} is supported by @{ClaimLRE_Argument}, @{ClaimSensor_Argument}, @{ClaimAutopiloe_Argument}, @{ClaimActuator_Argument}.›
 	Context Name src ‹{@{Claim C1}}› tgt ‹{@{Claim G1}}›
 		‹ @{Claim G1} is context for @{Claim C1}.›
 	Inference Name src ‹{@{Claim S1}}› tgt ‹{@{Claim G1}}›

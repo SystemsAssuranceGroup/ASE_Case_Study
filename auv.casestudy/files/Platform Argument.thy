@@ -14,8 +14,8 @@ begin
 	ArtifactReference Sensor.Sn3 ‹EVL›
 	ArtifactReference Sensor.Sn4 ‹System 
 	                              design review›
-	Inference Name src ‹{@{ClaimSensor.G2.a}, @{ClaimSensor.G2.a}, @{ClaimSensor.G2.b}}› tgt ‹{@{Claim Sensors}}›
-		‹ @{Claim Sensors} is supported by @{ClaimSensor.G2.a}, @{ClaimSensor.G2.a}, @{ClaimSensor.G2.b}.›
+	Inference Name src ‹{@{ClaimSensor.G2.a}, @{ClaimSensor.G2.b}}› tgt ‹{@{Claim Sensors}}›
+		‹ @{Claim Sensors} is supported by @{ClaimSensor.G2.a}, @{ClaimSensor.G2.b}.›
 	Inference Name src ‹{@{Claim Sensor.S1}}› tgt ‹{@{Claim Sensors}}›
 		‹ @{Claim Sensors} is supported by @{Claim Sensor.S1}.›
 	Inference Name src ‹{@{Claim Sensor.G2.a}}› tgt ‹{@{Claim Sensor.S1}}›

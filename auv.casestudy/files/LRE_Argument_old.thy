@@ -15,10 +15,10 @@ begin
 	ArtifactReference LRE.Sn5 ‹LRE behaviour model validation against R2›
 	ArtifactReference LRE.Sn2 ‹Testing›
 	ArtifactReference LRE.Sn3 ‹Formal verification›
-	Inference Name src ‹{@{ClaimLRE.G2}, @{ClaimLRE.G2}, @{ClaimLRE.G3}}› tgt ‹{@{Claim LRE.G1}}›
-		‹ @{Claim LRE.G1} is supported by @{ClaimLRE.G2}, @{ClaimLRE.G2}, @{ClaimLRE.G3}.›
-	Inference Name src ‹{@{ClaimLRE.G8}, @{ClaimLRE.G8}, @{ClaimLRE.G9}}› tgt ‹{@{Claim LRE.G7}}›
-		‹ @{Claim LRE.G7} is supported by @{ClaimLRE.G8}, @{ClaimLRE.G8}, @{ClaimLRE.G9}.›
+	Inference Name src ‹{@{ClaimLRE.G2}, @{ClaimLRE.G3}}› tgt ‹{@{Claim LRE.G1}}›
+		‹ @{Claim LRE.G1} is supported by @{ClaimLRE.G2}, @{ClaimLRE.G3}.›
+	Inference Name src ‹{@{ClaimLRE.G8}, @{ClaimLRE.G9}}› tgt ‹{@{Claim LRE.G7}}›
+		‹ @{Claim LRE.G7} is supported by @{ClaimLRE.G8}, @{ClaimLRE.G9}.›
 	Inference Name src ‹{@{Claim LRE.S1}}› tgt ‹{@{Claim LRE.G1}}›
 		‹ @{Claim LRE.G1} is supported by @{Claim LRE.S1}.›
 	Inference Name src ‹{@{ArtifactReference LRE.Sn4}}› tgt ‹{@{Claim LRE.G8}}›

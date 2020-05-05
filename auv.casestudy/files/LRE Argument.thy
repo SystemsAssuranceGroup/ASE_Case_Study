@@ -24,8 +24,8 @@ begin
 	                       verification›
 	ArtifactReference Sn1 ‹Implementing transitions in RoboChart 
 	                       model›
-	Inference Name src ‹{@{ClaimC7.a}, @{ClaimC7.a}, @{ClaimC7.b}, @{ClaimC7.c}, @{ClaimC7.d}, @{ClaimLRE.Validation}, @{ClaimLRE.Appropriateness}}› tgt ‹{@{Claim C6.a}}›
-		‹ @{Claim C6.a} is supported by @{ClaimC7.a}, @{ClaimC7.a}, @{ClaimC7.b}, @{ClaimC7.c}, @{ClaimC7.d}, @{ClaimLRE.Validation}, @{ClaimLRE.Appropriateness}.›
+	Inference Name src ‹{@{ClaimC7.a}, @{ClaimC7.b}, @{ClaimC7.c}, @{ClaimC7.d}, @{ClaimLRE.Validation}, @{ClaimLRE.Appropriateness}}› tgt ‹{@{Claim C6.a}}›
+		‹ @{Claim C6.a} is supported by @{ClaimC7.a}, @{ClaimC7.b}, @{ClaimC7.c}, @{ClaimC7.d}, @{ClaimLRE.Validation}, @{ClaimLRE.Appropriateness}.›
 	Inference Name src ‹{@{ArtifactReference Sn2}}› tgt ‹{@{Claim C7.b}}›
 		‹ @{Claim C7.b} is supported by @{ArtifactReference Sn2}.›
 	Inference Name src ‹{@{ArtifactReference Sn3}}› tgt ‹{@{Claim C7.c}}›
