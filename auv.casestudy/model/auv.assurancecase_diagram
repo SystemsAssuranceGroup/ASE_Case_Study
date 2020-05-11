@@ -96,7 +96,14 @@
       <children xmi:type="notation:DecorationNode" xmi:id="_YiO1cYuqEeq_upnp5Zj4dg" type="5026"/>
       <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="_YiOOYYuqEeq_upnp5Zj4dg" diagramLink="_z8WcsIu0Eeq_upnp5Zj4dg" hint="FIXME put GenEditorGenerator.modelID value here"/>
       <element xmi:type="gsn_:Module" href="auv.assurancecase#//@argumentPackage.11"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YiOOYouqEeq_upnp5Zj4dg" x="605" y="630"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_YiOOYouqEeq_upnp5Zj4dg" x="370" y="450"/>
+    </children>
+    <children xmi:type="notation:Shape" xmi:id="__qXkcJAREeqf7Ll-ui4TMw" type="2013" fontName="Microsoft YaHei UI">
+      <children xmi:type="notation:DecorationNode" xmi:id="__qYykJAREeqf7Ll-ui4TMw" type="5025"/>
+      <children xmi:type="notation:DecorationNode" xmi:id="__qYykZAREeqf7Ll-ui4TMw" type="5026"/>
+      <styles xmi:type="notation:HintedDiagramLinkStyle" xmi:id="__qXkcZAREeqf7Ll-ui4TMw" hint="FIXME put GenEditorGenerator.modelID value here"/>
+      <element xmi:type="gsn_:Module" href="auv.assurancecase#//@argumentPackage.12"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="__qXkcpAREeqf7Ll-ui4TMw" x="695" y="640"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_kVTjgWjPEeqSIbNKXd44ug"/>
     <element xmi:type="assuranceCase_:AssuranceCasePackage" href="auv.assurancecase#/"/>
@@ -972,49 +979,49 @@
       <children xmi:type="notation:DecorationNode" xmi:id="_X4ZLMooeEeqhabcvZQFuDA" type="5005"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_X4ZLM4oeEeqhabcvZQFuDA" type="5006"/>
       <element xmi:type="gsn_:Goal" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.1"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_X4ZLMYoeEeqhabcvZQFuDA" x="235" y="635" width="131" height="81"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_X4ZLMYoeEeqhabcvZQFuDA" x="260" y="615" width="131" height="81"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_oWsewIogEeqhabcvZQFuDA" type="2303" fontName="Times New Roman" fontHeight="12">
       <children xmi:type="notation:DecorationNode" xmi:id="_oWtF0IogEeqhabcvZQFuDA" type="5005"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_oWtF0YogEeqhabcvZQFuDA" type="5006"/>
       <element xmi:type="gsn_:Goal" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.2"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oWsewYogEeqhabcvZQFuDA" x="870" y="635" width="200" height="144"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_oWsewYogEeqhabcvZQFuDA" x="895" y="615" width="200" height="144"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_vZmg0IogEeqhabcvZQFuDA" type="2303" fontName="Times New Roman" fontHeight="12">
       <children xmi:type="notation:DecorationNode" xmi:id="_vZmg0oogEeqhabcvZQFuDA" type="5005"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_vZmg04ogEeqhabcvZQFuDA" type="5006"/>
       <element xmi:type="gsn_:Goal" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.3"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vZmg0YogEeqhabcvZQFuDA" x="450" y="635" width="200" height="124"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_vZmg0YogEeqhabcvZQFuDA" x="475" y="615" width="200" height="124"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_-4JScIogEeqhabcvZQFuDA" type="2303" fontName="Times New Roman" fontHeight="12">
       <children xmi:type="notation:DecorationNode" xmi:id="_-4JScoogEeqhabcvZQFuDA" type="5005"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_-4JSc4ogEeqhabcvZQFuDA" type="5006"/>
       <element xmi:type="gsn_:Goal" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.4"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-4JScYogEeqhabcvZQFuDA" x="660" y="635" width="131" height="81"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-4JScYogEeqhabcvZQFuDA" x="685" y="615" width="131" height="81"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_Wa5yIIohEeqhabcvZQFuDA" type="2305" fontName="Times New Roman" fontHeight="12">
       <children xmi:type="notation:DecorationNode" xmi:id="_Wa6ZMIohEeqhabcvZQFuDA" type="5009"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_Wa6ZMYohEeqhabcvZQFuDA" type="5010"/>
       <element xmi:type="gsn_:Solution" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.5"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Wa5yIYohEeqhabcvZQFuDA" x="475" y="780" width="150" height="150"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Wa5yIYohEeqhabcvZQFuDA" x="500" y="760" width="150" height="150"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_nOQakIohEeqhabcvZQFuDA" type="2305" fontName="Times New Roman" fontHeight="12">
       <children xmi:type="notation:DecorationNode" xmi:id="_nOQakoohEeqhabcvZQFuDA" type="5009"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_nOQak4ohEeqhabcvZQFuDA" type="5010"/>
       <element xmi:type="gsn_:Solution" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.7"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nOQakYohEeqhabcvZQFuDA" x="680" y="780" width="161" height="161"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_nOQakYohEeqhabcvZQFuDA" x="710" y="760" width="21" height="21"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_yFN0YIuSEeq8dOlYQHFj9w" type="2305" fontName="Times New Roman" fontHeight="12">
       <children xmi:type="notation:DecorationNode" xmi:id="_yFN0YouSEeq8dOlYQHFj9w" type="5009"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_yFN0Y4uSEeq8dOlYQHFj9w" type="5010"/>
       <element xmi:type="gsn_:Solution" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.9"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yFN0YYuSEeq8dOlYQHFj9w" x="260" y="780" width="150" height="150"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_yFN0YYuSEeq8dOlYQHFj9w" x="285" y="760" width="150" height="150"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_gQ96MIuTEeq8dOlYQHFj9w" type="2306" fontName="Times New Roman" fontHeight="12">
       <children xmi:type="notation:DecorationNode" xmi:id="_gQ-hQIuTEeq8dOlYQHFj9w" type="5011"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_gQ-hQYuTEeq8dOlYQHFj9w" type="5012"/>
       <element xmi:type="gsn_:Context" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.10"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gQ96MYuTEeq8dOlYQHFj9w" x="925" y="330" width="36" height="21"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_gQ96MYuTEeq8dOlYQHFj9w" x="925" y="325" width="36" height="21"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_jaSbkIuTEeq8dOlYQHFj9w" type="2312" fontName="Times New Roman" fontHeight="12">
       <children xmi:type="notation:DecorationNode" xmi:id="_jaSbkouTEeq8dOlYQHFj9w" type="5022"/>
@@ -1034,25 +1041,19 @@
       <children xmi:type="notation:DecorationNode" xmi:id="_-QN3AoulEeq9uo-03XSo9w" type="5007"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_-QN3A4ulEeq9uo-03XSo9w" type="5008"/>
       <element xmi:type="gsn_:Strategy" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.15"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-QN3AYulEeq9uo-03XSo9w" x="595" y="330" width="76" height="46"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_-QN3AYulEeq9uo-03XSo9w" x="595" y="325" width="76" height="46"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_RHW8IIumEeq9uo-03XSo9w" type="2303" fontName="Times New Roman" fontHeight="12">
       <children xmi:type="notation:DecorationNode" xmi:id="_RHW8IoumEeq9uo-03XSo9w" type="5005"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_RHW8I4umEeq9uo-03XSo9w" type="5006"/>
       <element xmi:type="gsn_:Goal" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.22"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RHW8IYumEeq9uo-03XSo9w" x="210" y="470" width="141" height="101"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_RHW8IYumEeq9uo-03XSo9w" x="215" y="460" width="26" height="21"/>
     </children>
     <children xmi:type="notation:Shape" xmi:id="_0i_uUIumEeq9uo-03XSo9w" type="2308" fontName="Times New Roman" fontHeight="12">
       <children xmi:type="notation:DecorationNode" xmi:id="_0i_uUoumEeq9uo-03XSo9w" type="5015"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_0jAVYIumEeq9uo-03XSo9w" type="5016"/>
       <element xmi:type="gsn_:Assumption" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.24"/>
       <layoutConstraint xmi:type="notation:Bounds" xmi:id="_0i_uUYumEeq9uo-03XSo9w" x="210" y="165" width="211" height="131"/>
-    </children>
-    <children xmi:type="notation:Shape" xmi:id="_KgcdEIunEeq9uo-03XSo9w" type="2303" fontName="Times New Roman" fontHeight="12">
-      <children xmi:type="notation:DecorationNode" xmi:id="_KgcdEounEeq9uo-03XSo9w" type="5005"/>
-      <children xmi:type="notation:DecorationNode" xmi:id="_KgcdE4unEeq9uo-03XSo9w" type="5006"/>
-      <element xmi:type="gsn_:Goal" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.25"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_KgcdEYunEeq9uo-03XSo9w" x="925" y="480" width="200" height="144"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_VhS-gYn-EeqhabcvZQFuDA"/>
     <element xmi:type="gsn_:Module" href="auv.assurancecase#//@argumentPackage.2"/>
@@ -1152,20 +1153,12 @@
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_krDlQIumEeq9uo-03XSo9w" id="(0.81,0.3387096774193548)"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_krDlQYumEeq9uo-03XSo9w" id="(0.445,0.1527777777777778)"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_T3S3sIunEeq9uo-03XSo9w" type="4401" source="_-QN3AIulEeq9uo-03XSo9w" target="_KgcdEIunEeq9uo-03XSo9w">
-      <children xmi:type="notation:DecorationNode" xmi:id="_T3TewYunEeq9uo-03XSo9w" type="6001">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_T3TewounEeq9uo-03XSo9w" x="20"/>
-      </children>
-      <styles xmi:type="notation:FontStyle" xmi:id="_T3S3sYunEeq9uo-03XSo9w" fontName="Sans"/>
-      <element xmi:type="gsn_:SupportedBy" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.26"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_T3TewIunEeq9uo-03XSo9w" points="[100, -5, -235, -5]$[235, -5, -100, -5]"/>
-    </edges>
     <edges xmi:type="notation:Connector" xmi:id="_d2wKcIunEeq9uo-03XSo9w" type="4402" source="_WcYtwIn-EeqhabcvZQFuDA" target="_0i_uUIumEeq9uo-03XSo9w" closestDistance="true">
       <children xmi:type="notation:DecorationNode" xmi:id="_d2wKc4unEeq9uo-03XSo9w" type="6002">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_d2wKdIunEeq9uo-03XSo9w" y="20"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_d2wKcYunEeq9uo-03XSo9w" fontName="Sans"/>
-      <element xmi:type="gsn_:InContextOf" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.27"/>
+      <element xmi:type="gsn_:InContextOf" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.25"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_d2wKcounEeq9uo-03XSo9w" points="[-102, 0, 435, -133]$[-270, 0, 267, -133]$[-270, 133, 267, 0]$[-437, 133, 100, 0]"/>
       <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_pRxcQIunEeq9uo-03XSo9w" id="(0.5317073170731708,0.08633093525179857)"/>
     </edges>
@@ -1174,7 +1167,7 @@
         <layoutConstraint xmi:type="notation:Location" xmi:id="_IEHvIYuoEeq9uo-03XSo9w" x="20"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_IEHIEYuoEeq9uo-03XSo9w" fontName="Sans"/>
-      <element xmi:type="gsn_:SupportedBy" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.28"/>
+      <element xmi:type="gsn_:SupportedBy" href="auv.assurancecase#//@argumentPackage.2/@argumentationElement.26"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_IEHIEouoEeq9uo-03XSo9w" points="[-1, 67, 0, -72]$[-4, 109, -3, -30]"/>
       <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_IEJkUIuoEeq9uo-03XSo9w" id="(0.47333333333333333,0.2)"/>
     </edges>
@@ -1759,35 +1752,35 @@
     <element xmi:type="gsn_:Module" href="auv.assurancecase#//@argumentPackage.9"/>
   </notation:Diagram>
   <notation:Diagram xmi:id="_z8WcsIu0Eeq_upnp5Zj4dg" type="Gsn" measurementUnit="Pixel">
-    <children xmi:type="notation:Shape" xmi:id="_z-JzgIu0Eeq_upnp5Zj4dg" type="2309" fontName="Sans">
+    <children xmi:type="notation:Shape" xmi:id="_z-JzgIu0Eeq_upnp5Zj4dg" type="2309" fontName="Times New Roman">
       <children xmi:type="notation:DecorationNode" xmi:id="_z-Jzgou0Eeq_upnp5Zj4dg" type="5017"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_z-Jzg4u0Eeq_upnp5Zj4dg" type="5018"/>
       <element xmi:type="gsn_:ModuleReference" href="auv.assurancecase#//@argumentPackage.11/@argumentationElement.0"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_z-JzgYu0Eeq_upnp5Zj4dg" x="485" y="275" width="200" height="142"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_z-JzgYu0Eeq_upnp5Zj4dg" x="480" y="355" width="91" height="66"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_z-JzhIu0Eeq_upnp5Zj4dg" type="2309" fontName="Sans">
+    <children xmi:type="notation:Shape" xmi:id="_z-JzhIu0Eeq_upnp5Zj4dg" type="2309" fontName="Times New Roman">
       <children xmi:type="notation:DecorationNode" xmi:id="_z-KakIu0Eeq_upnp5Zj4dg" type="5017"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_z-KakYu0Eeq_upnp5Zj4dg" type="5018"/>
       <element xmi:type="gsn_:ModuleReference" href="auv.assurancecase#//@argumentPackage.11/@argumentationElement.1"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_z-JzhYu0Eeq_upnp5Zj4dg" x="255" y="120" width="204" height="144"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_z-JzhYu0Eeq_upnp5Zj4dg" x="255" y="200" width="116" height="81"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_X5sGYIu4Eeq_upnp5Zj4dg" type="2309" fontName="Sans">
+    <children xmi:type="notation:Shape" xmi:id="_X5sGYIu4Eeq_upnp5Zj4dg" type="2309" fontName="Times New Roman">
       <children xmi:type="notation:DecorationNode" xmi:id="_X5sGYou4Eeq_upnp5Zj4dg" type="5017"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_X5sGY4u4Eeq_upnp5Zj4dg" type="5018"/>
       <element xmi:type="gsn_:ModuleReference" href="auv.assurancecase#//@argumentPackage.11/@argumentationElement.3"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_X5sGYYu4Eeq_upnp5Zj4dg" x="485" y="440" width="200" height="142"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_X5sGYYu4Eeq_upnp5Zj4dg" x="480" y="200" width="86" height="61"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_eFx1MIu4Eeq_upnp5Zj4dg" type="2309" fontName="Sans">
+    <children xmi:type="notation:Shape" xmi:id="_eFx1MIu4Eeq_upnp5Zj4dg" type="2309" fontName="Times New Roman">
       <children xmi:type="notation:DecorationNode" xmi:id="_eFycQYu4Eeq_upnp5Zj4dg" type="5017"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_eFycQou4Eeq_upnp5Zj4dg" type="5018"/>
       <element xmi:type="gsn_:ModuleReference" href="auv.assurancecase#//@argumentPackage.11/@argumentationElement.4"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eFycQIu4Eeq_upnp5Zj4dg" x="485" y="120" width="71" height="51"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_eFycQIu4Eeq_upnp5Zj4dg" x="480" y="510" width="71" height="51"/>
     </children>
-    <children xmi:type="notation:Shape" xmi:id="_hflpoIu4Eeq_upnp5Zj4dg" type="2309" fontName="Sans">
+    <children xmi:type="notation:Shape" xmi:id="_hflpoIu4Eeq_upnp5Zj4dg" type="2309" fontName="Times New Roman">
       <children xmi:type="notation:DecorationNode" xmi:id="_hflpoou4Eeq_upnp5Zj4dg" type="5017"/>
       <children xmi:type="notation:DecorationNode" xmi:id="_hflpo4u4Eeq_upnp5Zj4dg" type="5018"/>
       <element xmi:type="gsn_:ModuleReference" href="auv.assurancecase#//@argumentPackage.11/@argumentationElement.5"/>
-      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hflpoYu4Eeq_upnp5Zj4dg" x="255" y="275" width="200" height="142"/>
+      <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hflpoYu4Eeq_upnp5Zj4dg" x="255" y="510" width="96" height="71"/>
     </children>
     <styles xmi:type="notation:DiagramStyle" xmi:id="_z8WcsYu0Eeq_upnp5Zj4dg"/>
     <element xmi:type="gsn_:Module" href="auv.assurancecase#//@argumentPackage.11"/>
@@ -1798,8 +1791,8 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_z-MPwYu0Eeq_upnp5Zj4dg" fontName="Sans"/>
       <element xmi:type="gsn_:SupportedBy" href="auv.assurancecase#//@argumentPackage.11/@argumentationElement.2"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_z-MPwou0Eeq_upnp5Zj4dg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_f1SDUIwNEeqV3MDFBap6gA" id="(0.8480392156862745,0.9097222222222222)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WePbcIwNEeqV3MDFBap6gA" id="(0.05,0.06338028169014084)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_f1SDUIwNEeqV3MDFBap6gA" id="(0.0,0.9859154929577465)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WePbcIwNEeqV3MDFBap6gA" id="(0.255,0.14788732394366197)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_lxPsEIu4Eeq_upnp5Zj4dg" type="4401" source="_z-JzhIu0Eeq_upnp5Zj4dg" target="_X5sGYIu4Eeq_upnp5Zj4dg">
       <children xmi:type="notation:DecorationNode" xmi:id="_lxPsE4u4Eeq_upnp5Zj4dg" type="6001">
@@ -1808,8 +1801,8 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_lxPsEYu4Eeq_upnp5Zj4dg" fontName="Sans"/>
       <element xmi:type="gsn_:SupportedBy" href="auv.assurancecase#//@argumentPackage.11/@argumentationElement.6"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_lxPsEou4Eeq_upnp5Zj4dg" points="[-38, 72, 72, -188]$[-118, 188, -8, -72]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fCjl4IwNEeqV3MDFBap6gA" id="(0.9656862745098039,0.9444444444444444)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WJxAQIwNEeqV3MDFBap6gA" id="(0.03,0.04225352112676056)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_fCjl4IwNEeqV3MDFBap6gA" id="(0.985,0.5492957746478874)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_WJxAQIwNEeqV3MDFBap6gA" id="(0.015,0.5563380281690141)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_mWtwoIu4Eeq_upnp5Zj4dg" type="4401" source="_z-JzhIu0Eeq_upnp5Zj4dg" target="_eFx1MIu4Eeq_upnp5Zj4dg">
       <children xmi:type="notation:DecorationNode" xmi:id="_mWuXsIu4Eeq_upnp5Zj4dg" type="6001">
@@ -1818,8 +1811,8 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_mWtwoYu4Eeq_upnp5Zj4dg" fontName="Sans"/>
       <element xmi:type="gsn_:SupportedBy" href="auv.assurancecase#//@argumentPackage.11/@argumentationElement.7"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_mWtwoou4Eeq_upnp5Zj4dg" points="[40, 72, -78, -140]$[109, 188, -9, -24]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gau5wIwNEeqV3MDFBap6gA" id="(0.9901960784313726,0.5902777777777778)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mWxbAIu4Eeq_upnp5Zj4dg" id="(0.16,0.5633802816901409)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_gau5wIwNEeqV3MDFBap6gA" id="(0.015,0.9225352112676056)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mWxbAIu4Eeq_upnp5Zj4dg" id="(0.115,0.23943661971830985)"/>
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_mxg2QIu4Eeq_upnp5Zj4dg" type="4401" source="_z-JzhIu0Eeq_upnp5Zj4dg" target="_hflpoIu4Eeq_upnp5Zj4dg">
       <children xmi:type="notation:DecorationNode" xmi:id="_mxhdUIu4Eeq_upnp5Zj4dg" type="6001">
@@ -1828,8 +1821,28 @@
       <styles xmi:type="notation:FontStyle" xmi:id="_mxg2QYu4Eeq_upnp5Zj4dg" fontName="Sans"/>
       <element xmi:type="gsn_:SupportedBy" href="auv.assurancecase#//@argumentPackage.11/@argumentationElement.8"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_mxg2Qou4Eeq_upnp5Zj4dg" points="[102, 58, -289, -165]$[391, 188, 0, -35]"/>
-      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_eYk0wIwNEeqV3MDFBap6gA" id="(0.6470588235294118,0.8611111111111112)"/>
-      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mxjSgIu4Eeq_upnp5Zj4dg" id="(0.01,0.04929577464788732)"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_eYk0wIwNEeqV3MDFBap6gA" id="(0.08,0.8732394366197183)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_mxjSgIu4Eeq_upnp5Zj4dg" id="(0.07,0.035211267605633804)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_VjYNMJAUEeqf7Ll-ui4TMw" type="4401" source="_z-JzgIu0Eeq_upnp5Zj4dg" target="_eFx1MIu4Eeq_upnp5Zj4dg">
+      <children xmi:type="notation:DecorationNode" xmi:id="_VjY0QJAUEeqf7Ll-ui4TMw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_VjY0QZAUEeqf7Ll-ui4TMw" x="20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_VjYNMZAUEeqf7Ll-ui4TMw" fontName="Microsoft YaHei UI"/>
+      <element xmi:type="gsn_:SupportedBy" href="auv.assurancecase#//@argumentPackage.11/@argumentationElement.9"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_VjYNMpAUEeqf7Ll-ui4TMw" points="[13, -3, -142, 31]$[177, -16, 22, 18]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_VjaCYJAUEeqf7Ll-ui4TMw" id="(0.84,0.8732394366197183)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_VjaCYZAUEeqf7Ll-ui4TMw" id="(0.01,0.028169014084507043)"/>
+    </edges>
+    <edges xmi:type="notation:Connector" xmi:id="_Lwo7cJBOEeqf7Ll-ui4TMw" type="4401" source="_z-JzgIu0Eeq_upnp5Zj4dg" target="_X5sGYIu4Eeq_upnp5Zj4dg">
+      <children xmi:type="notation:DecorationNode" xmi:id="_LwpigJBOEeqf7Ll-ui4TMw" type="6001">
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_LwpigZBOEeqf7Ll-ui4TMw" x="20"/>
+      </children>
+      <styles xmi:type="notation:FontStyle" xmi:id="_Lwo7cZBOEeqf7Ll-ui4TMw" fontName="Microsoft YaHei UI"/>
+      <element xmi:type="gsn_:SupportedBy" href="auv.assurancecase#//@argumentPackage.11/@argumentationElement.10"/>
+      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Lwo7cpBOEeqf7Ll-ui4TMw" points="[29, -10, -135, 45]$[185, -44, 21, 11]"/>
+      <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Lwsl0JBOEeqf7Ll-ui4TMw" id="(0.125,0.0)"/>
+      <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Lwsl0ZBOEeqf7Ll-ui4TMw" id="(0.895,0.8098591549295775)"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>
