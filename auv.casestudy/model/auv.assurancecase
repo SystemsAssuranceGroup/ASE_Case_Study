@@ -273,7 +273,7 @@
         <name lang="English" content="URI"/>
         <description>
           <content>
-            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\ASE_Case_Study\auv.casestudy\model\auv.robochart"/>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="\model\auv.model"/>
           </content>
         </description>
         <implementationConstraint>
@@ -339,7 +339,7 @@
       <name lang="English" content="Context1"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Defined AUV operation area"/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Defined AUV operation area."/>
         </content>
       </description>
       <implementationConstraint>
