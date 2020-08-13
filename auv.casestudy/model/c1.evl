@@ -1,0 +1,40 @@
+context Transition
+{
+	constraint ValidateRule_0{
+		check{
+			return self.source.name == 'MOM' and self.target.name == 'HCM' implies Sequence{'t4','t5','t9'}.includes(self.name);
+		}
+		message{return " Something is wrong"; 
+		}
+	}
+	
+}
+
+constraint ValidateMatchingRule_0
+{
+	check{
+		var collection = new Sequence;
+		collection.addAll(Transition.all.select(v|v.source.name == 'HCM' and v.target.name == 'MOM'));
+		for (element in collection) { 
+ 			var result = Sequence{'t4','t5','t6','t9'}.includes(element.name);
+ 			if (result = false) return false;return true; 
+}
+}
+	message{return "no error message defined for rule: 0";	}
+}
+
+
+constraint ValidateMatchingRule_0
+{
+	check{
+		var collection = new Sequence;
+		collection.addAll(Transition.all.select(v|v.source.name == 'MOM' and v.target.name == 'HCM'));
+		for (element in collection) { 
+ 			var result = Sequence{'t4','t5','t6','t9'}.includes(element.name);
+ 			if (result = false) 
+ 				return false;
+ 			return true; 
+		}
+	}
+	message{return "no error message defined for rule: 0";	}
+}

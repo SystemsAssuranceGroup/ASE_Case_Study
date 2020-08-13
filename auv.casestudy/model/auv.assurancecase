@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<assuranceCase_:AssuranceCasePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:artifact_="http://omg.sacm/2.0/artifact" xmlns:assuranceCase_="http://omg.sacm/2.0/assurancecase" xmlns:base_="http://omg.sacm/2.0/base" xmlns:gsn_="http://org.eclipse.acme/1.0/gsn" xmlns:terminology_="http://omg.sacm/2.0/terminology">
+<assuranceCase_:AssuranceCasePackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:argumentation_="http://omg.sacm/2.0/argumentation" xmlns:artifact_="http://omg.sacm/2.0/artifact" xmlns:assuranceCase_="http://omg.sacm/2.0/assurancecase" xmlns:base_="http://omg.sacm/2.0/base" xmlns:gsn_="http://org.eclipse.acme/1.0/gsn" xmlns:terminology_="http://omg.sacm/2.0/terminology">
   <name lang="English" content="AC_AUV"/>
   <description>
     <content>
@@ -195,12 +195,12 @@
         <name lang="English" content="URI"/>
         <description>
           <content>
-            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\ASE_Case_Study\auv.casestudy\model\lre.lre"/>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="\model\lre.model"/>
           </content>
         </description>
         <implementationConstraint>
           <content>
-            <value lang="English" content=""/>
+            <value lang="English" content="\model\lre.ecore"/>
           </content>
         </implementationConstraint>
       </artifactProperty>
@@ -266,7 +266,7 @@
       </description>
       <implementationConstraint>
         <content>
-          <value lang="English" content="var mom = State.all().select(s|s.name = &quot;MOM&quot;).first();&#xD;&#xA;var transitions = Transition.all().select(t|t.source = mom);&#xD;&#xA;var names = transitions.name;&#xD;&#xA;return (transitions.size() >= 3 and names.includes(&quot;t4&quot;) and names.includes(&quot;t5&quot;) and names.includes(&quot;t9&quot;));"/>
+          <value lang="English" content="for all Transition &#xD;&#xA;when name from source is &quot;MOM&quot; and name from target is &quot;HCM&quot;&#xD;&#xA;then the name is either &quot;t4&quot;or &quot;t5&quot; or &quot;t6&quot; or &quot;t9&quot; &#xD;&#xA;message &quot;Something is wrong&quot;&#xD;&#xA;&#xD;&#xA;types State{name}, Transition{source}"/>
         </content>
       </implementationConstraint>
       <artifactProperty>
@@ -278,13 +278,143 @@
         </description>
         <implementationConstraint>
           <content>
-            <value lang="English" content=""/>
+            <value lang="English" content="\model\robochart.ecore"/>
           </content>
         </implementationConstraint>
       </artifactProperty>
     </artifactElement>
     <artifactElement xsi:type="artifact_:Artifact">
-      <name lang="English" content="Deadlock_Free"/>
+      <name lang="English" content="LRE_HCM_R2"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content="var mom = State.all().select(s|s.name = &quot;MOM&quot;).first();&#xD;&#xA;var transitions = Transition.all().select(t|t.source = mom);&#xD;&#xA;var names = transitions.name;&#xD;&#xA;return (transitions.size() >= 3 and names.includes(&quot;t4&quot;) and names.includes(&quot;t5&quot;) and names.includes(&quot;t9&quot;));&#xD;&#xA;"/>
+        </content>
+      </implementationConstraint>
+      <artifactProperty>
+        <name lang="English" content="URI"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="\model\auv.model"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="\model\robochart.ecore"/>
+          </content>
+        </implementationConstraint>
+      </artifactProperty>
+    </artifactElement>
+    <artifactElement xsi:type="artifact_:Artifact">
+      <name lang="English" content="LRE_HCM_R3"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content="for all Transition &#xD;&#xA;the source is not empty and the target is not empty&#xD;&#xA;message &quot;Something is wrong&quot;&#xD;&#xA;&#xD;&#xA;types State{name}, Transition{source, target}"/>
+        </content>
+      </implementationConstraint>
+      <artifactProperty>
+        <name lang="English" content="URI"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="\model\auv.model"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="\model\robochart.ecore"/>
+          </content>
+        </implementationConstraint>
+      </artifactProperty>
+    </artifactElement>
+    <artifactElement xsi:type="artifact_:Artifact">
+      <name lang="English" content="LRE_HCM_R4"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content="find all data in Transition&#xD;&#xA;where name from source is &quot;MOM&quot; and &#xD;&#xA;name from target is &quot;HCM&quot;&#xD;&#xA;then name is either &quot;t4&quot;or &quot;t5&quot; or &quot;t6&quot; or &quot;t9&quot;&#xD;&#xA;&#xD;&#xA;types State{name}, Transition{source, target}"/>
+        </content>
+      </implementationConstraint>
+      <artifactProperty>
+        <name lang="English" content="URI"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="\model\auv.model"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="\model\robochart.ecore"/>
+          </content>
+        </implementationConstraint>
+      </artifactProperty>
+    </artifactElement>
+    <artifactElement xsi:type="artifact_:Artifact">
+      <name lang="English" content="Name"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content="var state = State.all.selectOne(s|s.name=&quot;HCM&quot;);&#xD;&#xA;return state.actions.get(0).action.trigger.event.name = &quot;advVel&quot;&#xD;&#xA;and state.actions.get(0).action.trigger.value.value = 0.1;"/>
+        </content>
+      </implementationConstraint>
+      <artifactProperty>
+        <name lang="English" content="URI"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="\model\auv.model"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="\model\robochart.ecore"/>
+          </content>
+        </implementationConstraint>
+      </artifactProperty>
+    </artifactElement>
+    <artifactElement xsi:type="artifact_:Artifact">
+      <name lang="English" content="Name"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content="&lt;EOLExpression> &#xD;&#xA;var t = Transition.all.select(t|t.name = &quot;t4&quot;).&#xD;&#xA;return t.condition.left.left.name = &quot;hvel&quot; and t.condition.left.right.value = 0.1 and&#xD;&#xA;&#x9;t.condition.right.left.name = &quot;hdst&quot; and t.condition.right.left.args.first = &quot;cstc&quot; &#xD;&#xA;&#x9;and t.condition.right.name = &quot;StaticObsHorizDist&quot;&#xD;&#xA;&lt;/EOLExpression> &#xD;&#xA;types Transition{source, target, condition}, State{name}, And{left, right}, GreaterOrEqual{left, right}, Float{value}"/>
+        </content>
+      </implementationConstraint>
+      <artifactProperty>
+        <name lang="English" content="URI"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="\model\auv.model"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="\model\robochart.ecore"/>
+          </content>
+        </implementationConstraint>
+      </artifactProperty>
+    </artifactElement>
+    <artifactElement xsi:type="artifact_:ArtifactAssetRelationship" source="//@artifactPackage.0/@artifactElement.9" target="//@artifactPackage.0/@artifactElement.14">
+      <name lang="English" content="Name"/>
       <description>
         <content>
           <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
@@ -295,19 +425,6 @@
           <value lang="English" content=""/>
         </content>
       </implementationConstraint>
-      <artifactProperty>
-        <name lang="English" content="URI"/>
-        <description>
-          <content>
-            <value xsi:type="base_:ExpressionLangString" lang="English" content="URI for external reference"/>
-          </content>
-        </description>
-        <implementationConstraint>
-          <content>
-            <value lang="English" content=""/>
-          </content>
-        </implementationConstraint>
-      </artifactProperty>
     </artifactElement>
   </artifactPackage>
   <argumentPackage xsi:type="gsn_:Module">
@@ -1155,7 +1272,7 @@
       </implementationConstraint>
     </argumentationElement>
     <argumentationElement xsi:type="gsn_:Goal" undeveloped="true">
-      <name lang="English" content="C7_d"/>
+      <name lang="English" content="C7_c"/>
       <description>
         <content>
           <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE accept no navigation input from the operator"/>
@@ -1180,19 +1297,6 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Goal">
-      <name lang="English" content="C7_c"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="LRE is deadlock free"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
     <argumentationElement xsi:type="gsn_:Solution" citedElement="//@artifactPackage.0/@artifactElement.6">
       <name lang="English" content="Sn2"/>
       <description>
@@ -1206,33 +1310,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.2/@argumentationElement.3" target="//@argumentPackage.2/@argumentationElement.5">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:Solution" citedElement="//@artifactPackage.0/@artifactElement.10">
-      <name lang="English" content="Sn3"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Formal verification&#xD;&#xA;"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.2/@argumentationElement.4" target="//@argumentPackage.2/@argumentationElement.7">
+    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.2/@argumentationElement.3" target="//@argumentPackage.2/@argumentationElement.4">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -1284,7 +1362,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:InContextOf" source="//@argumentPackage.2/@argumentationElement.0" target="//@argumentPackage.2/@argumentationElement.11">
+    <argumentationElement xsi:type="gsn_:InContextOf" source="//@argumentPackage.2/@argumentationElement.0" target="//@argumentPackage.2/@argumentationElement.8">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -1310,7 +1388,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:InContextOf" source="//@argumentPackage.2/@argumentationElement.0" target="//@argumentPackage.2/@argumentationElement.13">
+    <argumentationElement xsi:type="gsn_:InContextOf" source="//@argumentPackage.2/@argumentationElement.0" target="//@argumentPackage.2/@argumentationElement.10">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -1327,7 +1405,7 @@
       <name lang="English" content="LRE_S1"/>
       <description>
         <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="Argument by formalisation and decomposition."/>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="Argument by decomposition."/>
         </content>
       </description>
       <implementationConstraint>
@@ -1336,7 +1414,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.2/@argumentationElement.0" target="//@argumentPackage.2/@argumentationElement.15">
+    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.2/@argumentationElement.0" target="//@argumentPackage.2/@argumentationElement.12">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -1349,7 +1427,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.2/@argumentationElement.15" target="//@argumentPackage.2/@argumentationElement.1">
+    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.2/@argumentationElement.12" target="//@argumentPackage.2/@argumentationElement.1">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -1362,7 +1440,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.2/@argumentationElement.15" target="//@argumentPackage.2/@argumentationElement.3">
+    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.2/@argumentationElement.12" target="//@argumentPackage.2/@argumentationElement.3">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -1375,7 +1453,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.2/@argumentationElement.15" target="//@argumentPackage.2/@argumentationElement.4">
+    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.2/@argumentationElement.12" target="//@argumentPackage.2/@argumentationElement.2">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -1388,20 +1466,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.2/@argumentationElement.15" target="//@argumentPackage.2/@argumentationElement.2">
-      <name lang="English" content="Name"/>
-      <description>
-        <content>
-          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
-        </content>
-      </description>
-      <implementationConstraint>
-        <content>
-          <value lang="English" content=""/>
-        </content>
-      </implementationConstraint>
-    </argumentationElement>
-    <argumentationElement xsi:type="gsn_:InContextOf" source="//@argumentPackage.2/@argumentationElement.15" target="//@argumentPackage.2/@argumentationElement.10">
+    <argumentationElement xsi:type="gsn_:InContextOf" source="//@argumentPackage.2/@argumentationElement.12" target="//@argumentPackage.2/@argumentationElement.7">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -1427,7 +1492,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.2/@argumentationElement.15" target="//@argumentPackage.2/@argumentationElement.22">
+    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.2/@argumentationElement.12" target="//@argumentPackage.2/@argumentationElement.18">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -1453,7 +1518,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:InContextOf" source="//@argumentPackage.2/@argumentationElement.0" target="//@argumentPackage.2/@argumentationElement.24">
+    <argumentationElement xsi:type="gsn_:InContextOf" source="//@argumentPackage.2/@argumentationElement.0" target="//@argumentPackage.2/@argumentationElement.20">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -1466,7 +1531,7 @@
         </content>
       </implementationConstraint>
     </argumentationElement>
-    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.2/@argumentationElement.1" target="//@argumentPackage.2/@argumentationElement.9">
+    <argumentationElement xsi:type="gsn_:SupportedBy" source="//@argumentPackage.2/@argumentationElement.1" target="//@argumentPackage.2/@argumentationElement.6">
       <name lang="English" content="Name"/>
       <description>
         <content>
@@ -2675,6 +2740,84 @@
         <value lang="English" content=""/>
       </content>
     </implementationConstraint>
+  </argumentPackage>
+  <argumentPackage>
+    <name lang="English" content="Name"/>
+    <description>
+      <content>
+        <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+      </content>
+    </description>
+    <implementationConstraint>
+      <content>
+        <value lang="English" content=""/>
+      </content>
+    </implementationConstraint>
+    <argumentationElement xsi:type="argumentation_:Claim">
+      <name lang="English" content="Name"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
+    <argumentationElement xsi:type="argumentation_:AssertedInference" source="//@argumentPackage.13/@argumentationElement.2 //@argumentPackage.13/@argumentationElement.3" target="//@argumentPackage.13/@argumentationElement.0" reasoning="//@argumentPackage.13/@argumentationElement.4">
+      <name lang="English" content="Name"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
+    <argumentationElement xsi:type="argumentation_:Claim">
+      <name lang="English" content="Name"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
+    <argumentationElement xsi:type="argumentation_:Claim">
+      <name lang="English" content="Name"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
+    <argumentationElement xsi:type="argumentation_:ArgumentReasoning">
+      <name lang="English" content="Name"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+    </argumentationElement>
   </argumentPackage>
   <terminologyPackage>
     <name lang="English" content="AUV_Terminology"/>
