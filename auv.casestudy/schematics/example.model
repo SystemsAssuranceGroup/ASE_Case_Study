@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sys_arch:Schematics xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sys_arch="http://dlut.ai.fyp/1.0" xmi:id="_BJsasKDpEeuo3fi43NBWaQ">
+  <components xsi:type="sys_arch:Resistor" xmi:id="_Cjcb4KDpEeuo3fi43NBWaQ" name="R1" id="R1" resistance="50.0"/>
+  <components xsi:type="sys_arch:Inductor" xmi:id="_DCd6MKDpEeuo3fi43NBWaQ"/>
+  <components xsi:type="sys_arch:Capacitor" xmi:id="_DcSvcKDpEeuo3fi43NBWaQ"/>
+  <components xsi:type="sys_arch:Resistor" xmi:id="_HTMIgKDpEeuo3fi43NBWaQ"/>
+  <components xsi:type="sys_arch:Resistor" xmi:id="_HuEGoKDpEeuo3fi43NBWaQ"/>
+</sys_arch:Schematics>

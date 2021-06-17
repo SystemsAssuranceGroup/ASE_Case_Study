@@ -1,0 +1,45 @@
+rule Schematics2FMEDA
+	transform s: S!Schematics
+	to f: T!FMEDA {
+	for(c in s.components) {
+		if(not c.isTypeOf(S!Transmission_Wire)) {
+			var count = c.failure_modes.size();
+			var i = 0;
+			while(count > 0) {
+				c.name.println();
+				var entry = new T!FMEDA();
+				if(i == 0) {
+					entry.Component_Name=c.name;
+					entry.FIT=c.fit.asReal();
+					entry.Safety_Related=c.safety_related;
+					entry.Potential_To_Violate_Safety_Goal=c.safety_related;
+				}
+				entry.Failure_Mode=c.failure_modes.failure_mode.get(i);
+				entry.Failure_Mode_Distribution=c.failure_modes.mode_distribution.get(i);
+				if(c.safety_mechanisms.size() > 0 and c.safety_mechanisms.size() >= i) {
+					entry.Safety_Mechanism=c.safety_mechanisms.get(i).mechanism;
+					entry.Safety_Mechanism_Coverage=c.safety_mechanisms.get(i).coverage;
+				}
+				if(entry.Safety_Mechanism_Coverage.isDefined()) {
+					var fit = entry.FIT.asReal();
+					var distribution = entry.Failure_Mode_Distribution.asReal();
+					var coverage = entry.Safety_Mechanism_Coverage.asReal();
+					var residual = (100-coverage*100)/100;
+					entry.Single_Point_Failure_Rate = fit*residual;
+					entry.Single_Point_Failure_Rate.println();
+				}
+				else if(c.safety_related and i == 0) {
+					var fit = entry.FIT.asReal();
+					var distribution = entry.Failure_Mode_Distribution.asReal();
+					var residual = fit*distribution;
+					entry.Single_Point_Failure_Rate = residual;
+				}
+				i++;
+				count -= 1;
+			}
+		}
+	}
+}
+	
+	
+	

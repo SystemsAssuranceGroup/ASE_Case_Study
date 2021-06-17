@@ -1,0 +1,11 @@
+reset();
+
+operation reset() {
+	var components = S!Component.all;
+	for(c in components) {
+		c.fit = 0.0;
+		c.failure_modes.clear();
+		c.safety_related = false;
+	}
+}
+

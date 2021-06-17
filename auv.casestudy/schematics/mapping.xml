@@ -1,0 +1,13 @@
+<spreadsheet>
+  <worksheet name="Fmeda">
+    <column index="0" name="Component_Name"/>
+  	<column index="1" name="FIT"/>
+  	<column index="2" name="Safety_Related"/>
+  	<column index="3" name="Failure_Mode"/>
+  	<column index="4" name="Failure_Mode_Distribution" />
+  	<column index="5" name="Potential_To_Violate_Safety_Goal" />
+    <column index="6" name="Safety_Mechanism" />
+    <column index="7" name="Safety_Mechanism_Coverage" />
+    <column index="8" name="Single_Point_Failure_Rate" />
+  </worksheet>
+</spreadsheet>

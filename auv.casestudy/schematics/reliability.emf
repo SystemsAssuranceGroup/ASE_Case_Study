@@ -1,0 +1,35 @@
+@namespace(
+	uri="http://dlut.ai.fyp/1.0",
+	prefix="_reliability")
+package reliability;
+
+abstract class NamedElement {
+	attr String name;
+	attr String ~id;
+}
+
+class Failure_Mode_Table extends NamedElement {
+	val Failure_Device_Type[*] devices;
+	val Safety_Mechanism[*] safety_mechanisms;
+}
+
+enum Failure_Mode {
+	Short = 1;
+	Open = 2;
+	RAM_Failure = 3;
+}
+
+class Failure_Mode_Entry extends NamedElement {
+	attr Failure_Mode[1] failure_mode;
+	attr float mode_probability;	
+}
+
+class Failure_Device_Type extends NamedElement{
+	val Failure_Mode_Entry[*] failure_mode_entries;	
+}
+
+class Safety_Mechanism extends NamedElement {
+	ref Failure_Mode_Entry handle;
+	attr String mechanism;
+	attr float coverage;	
+}

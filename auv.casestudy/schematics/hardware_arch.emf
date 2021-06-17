@@ -1,0 +1,103 @@
+@namespace(
+	uri="http://dlut.ai.fyp/1.0",
+	prefix="sys_arch")
+package sys_arch;
+
+abstract class NamedElement {
+	attr String name;
+	attr String ~id;
+}
+
+class Schematics extends NamedElement{
+	val Component[*] components;
+}
+
+abstract class Component extends NamedElement{
+	attr float fit; //failures in time
+	attr boolean safety_related;
+	val Failure_Mode_Entry[*] failure_modes;
+	val Safety_Mechanism[*] safety_mechanisms;
+}
+
+class Failure_Mode_Entry extends NamedElement {
+	attr String failure_mode;
+	attr float mode_distribution;	
+}
+
+class Safety_Mechanism extends NamedElement {
+	ref Failure_Mode_Entry handle;
+	attr String mechanism;
+	attr float coverage;	
+}
+
+
+class Transmission_Wire extends Component {
+	ref Component[1] from;
+	ref Component[1] to;
+}
+
+abstract class RCLComponent extends Component {
+	
+}
+
+class Resistor extends RCLComponent {
+	attr float resistance;
+}
+
+class Capacitor extends RCLComponent {
+	attr float capacitance;
+}
+
+class Inductor extends RCLComponent {
+	attr float inductance;
+}
+
+abstract class PowerSupply extends Component {
+	attr float voltage;
+	attr float current;
+}
+
+class ACPowerSupply extends PowerSupply {
+	attr float freuqnecy;
+}
+
+class DCPowerSupply extends PowerSupply {
+
+}
+
+class Lamp extends Resistor {
+	attr float input_voltage;
+	attr float input_current;
+}
+
+class MCU extends Component {
+	
+}
+
+abstract class Transistor extends Component {
+	
+}
+
+class MOSFET extends Transistor {
+	
+}
+
+class OPAmp extends Transistor {
+	
+}
+
+class Ground extends Component {
+	
+}
+
+class Diode extends Transistor {
+	
+}
+
+class Triode extends Transistor {
+	
+}
+
+class Point extends Component {
+	
+}

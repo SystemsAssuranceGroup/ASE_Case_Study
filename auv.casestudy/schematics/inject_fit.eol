@@ -1,0 +1,29 @@
+"Start injecting FIT for componenets...".println();
+var entries = Entry.all;
+
+for(e in entries) {
+	for(tmp in getDevices(e.Component)) {
+		tmp.fit = e.FIT.asReal();
+	}
+}
+
+"Finished injecting FITs!".println();
+
+operation getDevices(type) {
+	var components = S!Component.all;
+	var ret = new Sequence;
+	for(c in components) {
+		if(c.type().name.equals(type)) {
+		
+			ret.add(c);
+		}
+	}
+	return ret;
+}
+
+operation remove_fit() {
+	var components = S!Component.all;
+	for(c in components) {
+		c.fit = 0.0;
+	}
+}

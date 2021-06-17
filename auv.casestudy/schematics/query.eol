@@ -1,0 +1,5 @@
+var capacitors = Capacitor.all();
+capacitors.failure_mode.print();
+
+var lamp = new Lamp;
+lamp.resistance = 50.0;

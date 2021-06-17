@@ -47,6 +47,11 @@
             <value lang="English" content=""/>
           </content>
         </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="0"/>
+          </content>
+        </implementationConstraint>
       </artifactProperty>
     </artifactElement>
     <artifactElement xsi:type="artifact_:Artifact">
@@ -65,12 +70,17 @@
         <name lang="English" content="URI"/>
         <description>
           <content>
-            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\ASE_Case_Study\auv.casestudy\model\auv.robochart"/>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="\model\auv.model"/>
           </content>
         </description>
         <implementationConstraint>
           <content>
-            <value lang="English" content=""/>
+            <value lang="English" content="\model\robochart.ecore"/>
+          </content>
+        </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="0"/>
           </content>
         </implementationConstraint>
       </artifactProperty>
@@ -99,6 +109,11 @@
             <value lang="English" content=""/>
           </content>
         </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="0"/>
+          </content>
+        </implementationConstraint>
       </artifactProperty>
     </artifactElement>
     <artifactElement xsi:type="artifact_:Artifact">
@@ -117,12 +132,17 @@
         <name lang="English" content="URI"/>
         <description>
           <content>
-            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\ASE_Case_Study\auv.casestudy\model\auv.robochart"/>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="\model\auv.model"/>
           </content>
         </description>
         <implementationConstraint>
           <content>
-            <value lang="English" content=""/>
+            <value lang="English" content="\model\robochart.ecore"/>
+          </content>
+        </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="0"/>
           </content>
         </implementationConstraint>
       </artifactProperty>
@@ -151,6 +171,11 @@
             <value lang="English" content=""/>
           </content>
         </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="0"/>
+          </content>
+        </implementationConstraint>
       </artifactProperty>
     </artifactElement>
     <artifactElement xsi:type="artifact_:Artifact">
@@ -169,12 +194,17 @@
         <name lang="English" content="URI"/>
         <description>
           <content>
-            <value xsi:type="base_:ExpressionLangString" lang="English" content="C:\Users\rwei\Git\ASE_Case_Study\auv.casestudy\model\obstacle_reading.auv_data"/>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="\model\obstacle_reading.auv_data"/>
           </content>
         </description>
         <implementationConstraint>
           <content>
-            <value lang="English" content=""/>
+            <value lang="English" content="\model\lre.ecore"/>
+          </content>
+        </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="0"/>
           </content>
         </implementationConstraint>
       </artifactProperty>
@@ -203,6 +233,11 @@
             <value lang="English" content="\model\lre.ecore"/>
           </content>
         </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="0"/>
+          </content>
+        </implementationConstraint>
       </artifactProperty>
     </artifactElement>
     <artifactElement xsi:type="artifact_:Artifact">
@@ -227,6 +262,11 @@
         <implementationConstraint>
           <content>
             <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="0"/>
           </content>
         </implementationConstraint>
       </artifactProperty>
@@ -255,6 +295,11 @@
             <value lang="English" content=""/>
           </content>
         </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="0"/>
+          </content>
+        </implementationConstraint>
       </artifactProperty>
     </artifactElement>
     <artifactElement xsi:type="artifact_:Artifact" date="2020-05-01T14:12:24.000+0800">
@@ -279,6 +324,11 @@
         <implementationConstraint>
           <content>
             <value lang="English" content="\model\robochart.ecore"/>
+          </content>
+        </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="0"/>
           </content>
         </implementationConstraint>
       </artifactProperty>
@@ -307,6 +357,11 @@
             <value lang="English" content="\model\robochart.ecore"/>
           </content>
         </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="0"/>
+          </content>
+        </implementationConstraint>
       </artifactProperty>
     </artifactElement>
     <artifactElement xsi:type="artifact_:Artifact">
@@ -331,6 +386,11 @@
         <implementationConstraint>
           <content>
             <value lang="English" content="\model\robochart.ecore"/>
+          </content>
+        </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="0"/>
           </content>
         </implementationConstraint>
       </artifactProperty>
@@ -359,6 +419,11 @@
             <value lang="English" content="\model\robochart.ecore"/>
           </content>
         </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="0"/>
+          </content>
+        </implementationConstraint>
       </artifactProperty>
     </artifactElement>
     <artifactElement xsi:type="artifact_:Artifact">
@@ -383,6 +448,11 @@
         <implementationConstraint>
           <content>
             <value lang="English" content="\model\robochart.ecore"/>
+          </content>
+        </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="0"/>
           </content>
         </implementationConstraint>
       </artifactProperty>
@@ -411,6 +481,11 @@
             <value lang="English" content="\model\robochart.ecore"/>
           </content>
         </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="0"/>
+          </content>
+        </implementationConstraint>
       </artifactProperty>
     </artifactElement>
     <artifactElement xsi:type="artifact_:ArtifactAssetRelationship" source="//@artifactPackage.0/@artifactElement.9" target="//@artifactPackage.0/@artifactElement.14">
@@ -425,6 +500,37 @@
           <value lang="English" content=""/>
         </content>
       </implementationConstraint>
+    </artifactElement>
+    <artifactElement xsi:type="artifact_:Artifact">
+      <name lang="English" content="Name"/>
+      <description>
+        <content>
+          <value xsi:type="base_:ExpressionLangString" lang="English" content="&lt;...>"/>
+        </content>
+      </description>
+      <implementationConstraint>
+        <content>
+          <value lang="English" content=""/>
+        </content>
+      </implementationConstraint>
+      <artifactProperty>
+        <name lang="English" content="URI"/>
+        <description>
+          <content>
+            <value xsi:type="base_:ExpressionLangString" lang="English" content="URI for external reference"/>
+          </content>
+        </description>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content=""/>
+          </content>
+        </implementationConstraint>
+        <implementationConstraint>
+          <content>
+            <value lang="English" content="0"/>
+          </content>
+        </implementationConstraint>
+      </artifactProperty>
     </artifactElement>
   </artifactPackage>
   <argumentPackage xsi:type="gsn_:Module">

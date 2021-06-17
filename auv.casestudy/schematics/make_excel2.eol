@@ -1,0 +1,19 @@
+var safety_related = S!Component.all.select(s|s.safety_related = true);
+
+for(e in safety_related) {
+	var count = e.failure_modes.size();
+	var i = 0;
+	while(i < count) {
+		new T!FMEDA(
+		Component_Name=e.name,
+		FIT=e.fit.asReal(),
+		Safety_Related=e.safety_related,
+		Failure_Mode=e.failure_modes.failure_mode.get(i),
+		Failure_Mode_Distribution=e.failure_modes.mode_distribution.get(i),
+		Potential_To_Violate_Safety_Goal=e.safety_related,
+		Safety_Mechanism="",
+		Safety_Mechanism_Coverage="",
+		Single_Point_Failure_Rate=1
+		);
+	}
+}

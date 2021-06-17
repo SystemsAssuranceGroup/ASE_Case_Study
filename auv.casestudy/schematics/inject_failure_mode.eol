@@ -1,0 +1,37 @@
+"Start injecting failure modes for componenets...".println();
+var entries = Entry.all;
+
+var tmp_type;
+for(e in entries) {
+	var type;
+	if(e.Device_Type.isUndefined()) {
+		type = tmp_type;
+	}
+	else {
+		tmp_type = e.Device_Type;
+		type = tmp_type;
+	}
+	inject_failure_mode(type, e);
+}
+
+"Finished injecting failure modes!".println();
+operation inject_failure_mode(type, entry) {
+	var components = S!Component.all;
+	var ret = new Sequence;
+	for(c in components) {
+		if(c.type().name.equals(type)) {
+			ret.add(c);
+			var failure_mode_entry = new S!Failure_Mode_Entry;
+			failure_mode_entry.failure_mode = entry.Failure_Mode;
+			failure_mode_entry.mode_distribution = entry.Mode_Distribution.asReal();
+			c.failure_modes.add(failure_mode_entry);
+		}
+	}
+}
+
+operation remove_failure_mode() {
+	var components = S!Component.all;
+	for(c in components) {
+		c.failure_modes.clear();
+	}
+}

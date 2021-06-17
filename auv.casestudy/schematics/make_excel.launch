@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.epsilon.eol.eclipse.dt.launching.EolLaunchConfigurationDelegate">
+    <booleanAttribute key="fine_grained_profiling" value="false"/>
+    <stringAttribute key="implementation_name" value="Parallel"/>
+    <listAttribute key="models">
+        <listEntry value="#Sat May 29 17:34:15 CST 2021&#13;&#10;aliases=&#13;&#10;reuseUnmodifiedFileBasedMetamodels=true&#13;&#10;modelFile=/final.year.project/sensor_power.model&#13;&#10;metamodelUri=http\://dlut.ai.fyp/1.0&#13;&#10;concurrent=false&#13;&#10;type=EMF&#13;&#10;readOnLoad=true&#13;&#10;storeOnDisposal=false&#13;&#10;expand=true&#13;&#10;fileBasedMetamodelUri=&#13;&#10;metamodelFile=&#13;&#10;cached=true&#13;&#10;name=S&#13;&#10;modelUri=platform\:/resource/final.year.project/sensor_power.model&#13;&#10;isMetamodelFileBased=false"/>
+        <listEntry value="#Sat May 29 17:34:10 CST 2021&#13;&#10;storeOnDisposal=true&#13;&#10;aliases=&#13;&#10;name=T&#13;&#10;CONFIGURATION_FILE=/final.year.project/mapping.xml&#13;&#10;type=ExcelModel&#13;&#10;readOnLoad=true&#13;&#10;SPREADSHEET_FILE=/final.year.project/fmeda.xlsx"/>
+    </listAttribute>
+    <intAttribute key="parallelism" value="7"/>
+    <listAttribute key="parameters"/>
+    <booleanAttribute key="profile_model_loading" value="false"/>
+    <booleanAttribute key="profiling_enabled" value="false"/>
+    <booleanAttribute key="reset_profiler" value="false"/>
+    <stringAttribute key="source" value="/final.year.project/make_excel.eol"/>
+</launchConfiguration>

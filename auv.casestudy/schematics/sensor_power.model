@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sys_arch:Schematics xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sys_arch="http://dlut.ai.fyp/1.0" xmi:id="_JaBVwMAwEeu3Z5bejbbc1g">
+  <components xsi:type="sys_arch:Diode" xmi:id="_Kp63YMAwEeu3Z5bejbbc1g" name="D1" id="D1" fit="10.0" safety_related="true">
+    <failure_modes xmi:id="_CqlogMBgEeuJV7iViNQldg" failure_mode="Open" mode_distribution="0.3"/>
+    <failure_modes xmi:id="_CqlogcBgEeuJV7iViNQldg" failure_mode="Short" mode_distribution="0.7"/>
+  </components>
+  <components xsi:type="sys_arch:Point" xmi:id="_Oa9gEMAwEeu3Z5bejbbc1g" name="P1" safety_related="true"/>
+  <components xsi:type="sys_arch:Transmission_Wire" xmi:id="_Pfv94MAwEeu3Z5bejbbc1g" name="W1" from="_Kp63YMAwEeu3Z5bejbbc1g" to="_Oa9gEMAwEeu3Z5bejbbc1g"/>
+  <components xsi:type="sys_arch:Capacitor" xmi:id="_R1o3MMAwEeu3Z5bejbbc1g" name="C1" fit="2.0">
+    <failure_modes xmi:id="_Cqm2oMBgEeuJV7iViNQldg" failure_mode="Open" mode_distribution="0.3"/>
+    <failure_modes xmi:id="_CqndsMBgEeuJV7iViNQldg" failure_mode="Short" mode_distribution="0.7"/>
+  </components>
+  <components xsi:type="sys_arch:Transmission_Wire" xmi:id="_T_h74MAwEeu3Z5bejbbc1g" name="W2" from="_Oa9gEMAwEeu3Z5bejbbc1g" to="_R1o3MMAwEeu3Z5bejbbc1g"/>
+  <components xsi:type="sys_arch:Capacitor" xmi:id="_V4XFwMAwEeu3Z5bejbbc1g" name="C2" fit="2.0">
+    <failure_modes xmi:id="_CqoEwMBgEeuJV7iViNQldg" failure_mode="Open" mode_distribution="0.3"/>
+    <failure_modes xmi:id="_CqoEwcBgEeuJV7iViNQldg" failure_mode="Short" mode_distribution="0.7"/>
+  </components>
+  <components xsi:type="sys_arch:Transmission_Wire" xmi:id="_W1xwQMAwEeu3Z5bejbbc1g" name="W3" from="_R1o3MMAwEeu3Z5bejbbc1g" to="_V4XFwMAwEeu3Z5bejbbc1g"/>
+  <components xsi:type="sys_arch:Ground" xmi:id="_YazNUMAwEeu3Z5bejbbc1g" name="GND1"/>
+  <components xsi:type="sys_arch:Transmission_Wire" xmi:id="_ZrbHsMAwEeu3Z5bejbbc1g" name="W4" from="_V4XFwMAwEeu3Z5bejbbc1g" to="_YazNUMAwEeu3Z5bejbbc1g"/>
+  <components xsi:type="sys_arch:Inductor" xmi:id="_vxPvUMAwEeu3Z5bejbbc1g" name="L1" fit="15.0" safety_related="true">
+    <failure_modes xmi:id="_CqpS4MBgEeuJV7iViNQldg" failure_mode="Open" mode_distribution="0.3"/>
+    <failure_modes xmi:id="_CqpS4cBgEeuJV7iViNQldg" failure_mode="Short" mode_distribution="0.7"/>
+  </components>
+  <components xsi:type="sys_arch:Transmission_Wire" xmi:id="_w2-oUMAwEeu3Z5bejbbc1g" name="W5" from="_Oa9gEMAwEeu3Z5bejbbc1g" to="_vxPvUMAwEeu3Z5bejbbc1g"/>
+  <components xsi:type="sys_arch:DCPowerSupply" xmi:id="_0BbLEMAwEeu3Z5bejbbc1g" name="U1" safety_related="true"/>
+  <components xsi:type="sys_arch:Transmission_Wire" xmi:id="_1G_sAMAwEeu3Z5bejbbc1g" name="W6" from="_vxPvUMAwEeu3Z5bejbbc1g" to="_0BbLEMAwEeu3Z5bejbbc1g"/>
+  <components xsi:type="sys_arch:Resistor" xmi:id="_3cjOIMAwEeu3Z5bejbbc1g" name="R1" fit="1.0">
+    <failure_modes xmi:id="_Cqp58MBgEeuJV7iViNQldg" failure_mode="Open" mode_distribution="0.3"/>
+    <failure_modes xmi:id="_CqqhAMBgEeuJV7iViNQldg" failure_mode="Short" mode_distribution="0.7"/>
+  </components>
+  <components xsi:type="sys_arch:Transmission_Wire" xmi:id="_46RwYMAwEeu3Z5bejbbc1g" name="W7" from="_0BbLEMAwEeu3Z5bejbbc1g" to="_3cjOIMAwEeu3Z5bejbbc1g"/>
+  <components xsi:type="sys_arch:Lamp" xmi:id="_63IeoMAwEeu3Z5bejbbc1g" name="Lamp1" fit="150.0">
+    <failure_modes xmi:id="_CqrIEMBgEeuJV7iViNQldg" failure_mode="Open" mode_distribution="1.0"/>
+  </components>
+  <components xsi:type="sys_arch:Transmission_Wire" xmi:id="_8P3MIMAwEeu3Z5bejbbc1g" name="W8" from="_3cjOIMAwEeu3Z5bejbbc1g" to="_63IeoMAwEeu3Z5bejbbc1g"/>
+  <components xsi:type="sys_arch:Ground" xmi:id="_-NogYMAwEeu3Z5bejbbc1g" name="GND2"/>
+  <components xsi:type="sys_arch:Transmission_Wire" xmi:id="__Mul4MAwEeu3Z5bejbbc1g" name="W9" from="_63IeoMAwEeu3Z5bejbbc1g" to="_-NogYMAwEeu3Z5bejbbc1g"/>
+  <components xsi:type="sys_arch:MCU" xmi:id="_EFBKgMAxEeu3Z5bejbbc1g" name="U2" fit="100.0" safety_related="true">
+    <failure_modes xmi:id="_CqrvIMBgEeuJV7iViNQldg" name="RAM" failure_mode="Ram_Failure" mode_distribution="1.0"/>
+    <safety_mechanisms xmi:id="_V0E5gMBuEeuJV7iViNQldg" name="ECC" handle="_CqrvIMBgEeuJV7iViNQldg" mechanism="ECC" coverage="0.99"/>
+  </components>
+  <components xsi:type="sys_arch:Transmission_Wire" xmi:id="_FTKYoMAxEeu3Z5bejbbc1g" name="W10" from="_0BbLEMAwEeu3Z5bejbbc1g" to="_EFBKgMAxEeu3Z5bejbbc1g"/>
+  <components xsi:type="sys_arch:Ground" xmi:id="_IDZroMAxEeu3Z5bejbbc1g" name="GND3"/>
+  <components xsi:type="sys_arch:Transmission_Wire" xmi:id="_JHY4MMAxEeu3Z5bejbbc1g" name="W11" from="_0BbLEMAwEeu3Z5bejbbc1g" to="_IDZroMAxEeu3Z5bejbbc1g"/>
+  <components xsi:type="sys_arch:Ground" xmi:id="_LoqiIMAxEeu3Z5bejbbc1g" name="GND4"/>
+  <components xsi:type="sys_arch:Transmission_Wire" xmi:id="_MjBRkMAxEeu3Z5bejbbc1g" name="W12" from="_EFBKgMAxEeu3Z5bejbbc1g" to="_LoqiIMAxEeu3Z5bejbbc1g"/>
+  <components xsi:type="sys_arch:MOSFET" xmi:id="_Q8OtgMAxEeu3Z5bejbbc1g" name="Q1" safety_related="true"/>
+  <components xsi:type="sys_arch:Transmission_Wire" xmi:id="_SNC1IMAxEeu3Z5bejbbc1g" name="W13" from="_EFBKgMAxEeu3Z5bejbbc1g" to="_Q8OtgMAxEeu3Z5bejbbc1g"/>
+  <components xsi:type="sys_arch:Ground" xmi:id="_UtdjcMAxEeu3Z5bejbbc1g" name="GND5"/>
+  <components xsi:type="sys_arch:Transmission_Wire" xmi:id="_VvaIoMAxEeu3Z5bejbbc1g" name="W14" from="_Q8OtgMAxEeu3Z5bejbbc1g" to="_UtdjcMAxEeu3Z5bejbbc1g"/>
+  <components xsi:type="sys_arch:Transmission_Wire" xmi:id="_Ymg4oMAxEeu3Z5bejbbc1g" name="W15" from="_Oa9gEMAwEeu3Z5bejbbc1g" to="_Q8OtgMAxEeu3Z5bejbbc1g"/>
+</sys_arch:Schematics>

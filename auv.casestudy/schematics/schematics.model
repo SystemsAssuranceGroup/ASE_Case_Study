@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sys_arch="http://dlut.ai.fyp/1.0">
+  <sys_arch:Schematics xmi:id="_zOkD8KDlEeuo3fi43NBWaQ" name="Sensor Power Supply" id="00000001">
+    <components xsi:type="sys_arch:Capacitor" xmi:id="_38Yd8KDlEeuo3fi43NBWaQ" name="C1" id="C1">
+      <failure_mode xmi:id="_w121QKDnEeuo3fi43NBWaQ" name="Open" mode="Open" distribution="0.3"/>
+      <failure_mode xmi:id="_0DQlYKDnEeuo3fi43NBWaQ" name="Short" mode="Short" distribution="0.7"/>
+    </components>
+    <components xsi:type="sys_arch:Capacitor" xmi:id="_6NTXsKDlEeuo3fi43NBWaQ" name="C2" id="C2"/>
+    <components xsi:type="sys_arch:Inductor" xmi:id="_7d3nsKDlEeuo3fi43NBWaQ" name="L1" id="L1"/>
+    <components xsi:type="sys_arch:Transmission_Wire" xmi:id="_L6M3QKDmEeuo3fi43NBWaQ" from="_38Yd8KDlEeuo3fi43NBWaQ" to="_6NTXsKDlEeuo3fi43NBWaQ"/>
+  </sys_arch:Schematics>
+  <sys_arch:Lamp/>
+  <sys_arch:Lamp resistance="50.0"/>
+</xmi:XMI>
